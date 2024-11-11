@@ -4,7 +4,7 @@
 | --- | --- | --- | --- | --- | --- | --- |
 | Healthy Lives | Alcohol Misuse | 2019 | [Department of Health](https://www.health-ni.gov.uk/publications/census-drug-and-alcohol-treatment-services-northern-ireland-30th-april-2019) | :x: | :heavy_exclamation_mark: - The data is at the Health and Social Care Trusts level | :x: |
 | Healthy Lives | Drug Misuse | 2019 | [Department of Health](https://www.health-ni.gov.uk/publications/census-drug-and-alcohol-treatment-services-northern-ireland-30th-april-2019) | :x: | :heavy_exclamation_mark:  - The data is at the Health and Social Care Trusts level | :x: |
-| Healthy Lives | Healhy Eating | :x: | :x: | :x: | :x: - The data is at the Health and Social Care Trusts level | :x: |
+| Healthy Lives | Healhy Eating | 2022-23 | [Department of Health](https://www.health-ni.gov.uk/publications/health-survey-northern-ireland-first-results-202223) | :x: | :heavy_exclamation_mark: - The data is at the Health and Social Care Trusts level | :x: |
 | Healthy Lives | Physical Activity | :x: | :x: | :x: | :x: - data unavailable | :x: |
 | Healthy Lives | Smoking | :x: | :x: | :x: | :x: - The data is at the Health and Social Care Trusts level | :x: |
 | Healthy Lives | Early Years Development | 2019 | [NISRA](https://www.ninis2.nisra.gov.uk) | [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :heavy_check_mark: | :heavy_check_mark: |
