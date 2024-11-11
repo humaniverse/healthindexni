@@ -3,7 +3,7 @@
 | Domain | Indicator | Year | Source | License | Indicator Code Added to `R/` | Data Added to `data/` |
 | --- | --- | --- | --- | --- | --- | --- |
 | Healthy Lives | Alcohol Misuse | 2019 | [Department of Health](https://www.health-ni.gov.uk/publications/census-drug-and-alcohol-treatment-services-northern-ireland-30th-april-2019) | :x: | :heavy_exclamation_mark: - The data is at the Health and Social Care Trusts level | :x: |
-| Healthy Lives | Drug Misuse | 2019 | [NISRA](https://www.nisra.gov.uk/search?query=drug++misuse&edit-submit-button=Go) | [OGL3](https://www.nisra.gov.uk/crown-copyright) | :heavy_check_mark: | :heavy_check_mark: |
+| Healthy Lives | Drug Misuse | 2019 | [Department of Health](https://www.health-ni.gov.uk/publications/census-drug-and-alcohol-treatment-services-northern-ireland-30th-april-2019) | :x: | :heavy_exclamation_mark:  - The data is at the Health and Social Care Trusts level | :x: |
 | Healthy Lives | Healhy Eating | :x: | :x: | :x: | :x: - The data is at the Health and Social Care Trusts level | :x: |
 | Healthy Lives | Physical Activity | :x: | :x: | :x: | :x: - data unavailable | :x: |
 | Healthy Lives | Smoking | :x: | :x: | :x: | :x: - The data is at the Health and Social Care Trusts level | :x: |
