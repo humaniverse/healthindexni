@@ -1,26 +1,49 @@
+# ---- Load packages ----
 library(tidyverse)
-library(httr)
-library(readODS)
+library(rio)
+library(geographr)
+library(readxl)
+library(scales)
 
-GET(
-  "https://www.ninis2.nisra.gov.uk/Download/Health%20and%20Social%20Care/Low%20Birth%20Weight%20(administrative%20geographies).ods",
-  write_disk(tf <- tempfile(fileext = ".ods"))
-)
+# ---- Get data and clean ----
+# LTLA Code
+ltla_lookup <- lookup_ltla_ltla |>
+  filter(str_detect(ltla23_code, "N")) |>
+  select(ltla23_code, ltla23_name)
 
-raw <-
-  read_ods(
-    tf,
-    sheet = "LGD2014",
-    range = "B4:C15"
-  )
+# Low Birth Weight
+# Source: https://www.publichealth.hscni.net/publications/statistical-profile-childrens-health-northern-ireland-202223
+url <- "https://www.publichealth.hscni.net/sites/default/files/2024-05/RUAG%20Childrens%20Health%20in%20NI%20-%202022-23%20-%20DATA%20TABLES.xlsx"
 
-birth_weight <-
-  raw |>
-  as_tibble() |>
+temp_file <- tempfile(fileext = ".xlsx")
+download.file(url, temp_file, mode = "wb")
+
+low_birth_weight_raw <- read_excel(temp_file, sheet = 33, skip = 2)
+
+low_birth_weight_raw$`% low birth weight infants (<2,500g)` <-
+  as.numeric(low_birth_weight_raw$`% low birth weight infants (<2,500g)`)
+
+low_birth_weight_raw$`% low birth weight infants (<2,500g)` <-
+  percent(low_birth_weight_raw$`% low birth weight infants (<2,500g)`, accuracy = 0.1)
+
+
+low_birth_weight <- low_birth_weight_raw |>
+  slice(37:47) |>
+  mutate(year = "2022/23") |>
   select(
-    lad_code = `LGD2014 Code`,
-    low_birth_weight_rate = `Live Births Under 2,500g (%)`
+    ltla23_name = `...3`,
+    low_birth_weight_percentage = `% low birth weight infants (<2,500g)`,
+    year
   )
 
-# Save
-write_rds(birth_weight, "data/vulnerability/health-inequalities/northern-ireland/healthy-lives/birth-weight.rds")
+# Join datasets
+lives_low_birth_weight <- low_birth_weight |>
+  left_join(ltla_lookup, by = c("ltla23_name" = "ltla23_name")) |>
+  select(
+    ltla24_code = ltla23_code,
+    low_birth_weight_percentage,
+    year
+  )
+
+# ---- Save output to data/ folder ----
+usethis::use_data(lives_low_birth_weight, overwrite = TRUE)
