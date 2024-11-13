@@ -32,3 +32,19 @@
 #'
 "lives_low_birth_weight"
 
+#' Percentage of Pupil Absences (2021/22)
+#'
+#' A dataset containing statistics on the percentage of unauthorised school
+#' absences.
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{total_pupil_absence_percentage}{Percentage of unauthorised school
+#' absences across primary, secondary, and special schools}
+#' \item{year}{School Year}
+#'
+#' ...
+#' }
+#' @source \url{https://data.nisra.gov.uk/}
+"lives_pupil_absence"
