@@ -47,4 +47,5 @@
 #' ...
 #' }
 #' @source \url{https://data.nisra.gov.uk/}
+#'
 "lives_pupil_absence"
