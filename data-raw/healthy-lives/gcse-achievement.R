@@ -1,29 +1,26 @@
+# ---- Load packages ----
 library(tidyverse)
-library(httr)
-library(readODS)
+library(geographr)
 
-GET(
-  "https://www.ninis2.nisra.gov.uk/Download/Children%20Education%20and%20Skills/School%20Leavers%20(administrative%20geographies).ods",
-  write_disk(tf <- tempfile(fileext = ".ods"))
-)
+# ---- Get and clean data ----
+# Source: https://data.nisra.gov.uk/
+url <- "https://ws-data.nisra.gov.uk/public/api.restful/PxStat.Data.Cube_API.ReadDataset/DESLSALGD/CSV/1.0/"
+gsce_raw <- read_csv(url)
 
-raw <-
-  read_ods(
-    tf,
-    sheet = "LGD2014",
-    range = "A4:S15"
-  )
 
-raw_tibble <-
-  raw |>
-  as_tibble()
-
-gcse <-
-  raw_tibble |>
+lives_gsce_attainment <- gsce_raw |>
+  filter(
+    `Academic Year` == "2022/23",
+    `Free School Meal Entitlement` == "All Persons",
+    `Statistic Label` ==
+      "% of School Leavers achieving at least 5 GCSEs at grades A*-C (incl. equivalent qualifications) including GCSE English and maths"
+  ) |>
   select(
-    lad_code = `LGD2014 Code`,
-    gcse_qualifications_percent = `Achieved At Least 5 GCSE's grades A*-C (or equiv) inc. GCSE English and GCSE Maths (%)`
-  )
+    ltla24_code = LGD2014,
+    gcse_qualifications_percent = VALUE,
+    year = `Academic Year`
+  ) |>
+  slice(-12)
 
-# Save
-write_rds(gcse, "data/vulnerability/health-inequalities/northern-ireland/healthy-lives/gcse-achievement.rds")
+# ---- Save output to data/ folder ----
+usethis::use_data(lives_gsce_attainment, overwrite = TRUE)

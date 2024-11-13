@@ -1,3 +1,21 @@
+#' Percentage GSCE Attainment, including Maths and English (2022/23)
+#'
+#' A dataset containing statistics on the percentage of GSCE attainment,
+#' including Maths and English (A-C grade).
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{gcse_qualifications_percent}{Grade A-C percentage of GSCEs, including
+#' Maths and English on results day, by Council, end of school year 2023}
+#' \item{year}{School Year}
+#'
+#' ...
+#' }
+#' @source \url{https://data.nisra.gov.uk/}
+#'
+"lives_gsce_attainment"
+
 #' Percentage of Babies Born Not at a Healthy Birth Weight (2022-2023)
 #'
 #' A dataset containing percentage babies born not at a healthy birth weight.
@@ -11,5 +29,6 @@
 #' ...
 #' }
 #' @source \url{https://www.publichealth.hscni.net/publications/statistical-profile-childrens-health-northern-ireland-202223}
+#'
 "lives_low_birth_weight"
 
