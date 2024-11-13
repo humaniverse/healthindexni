@@ -5,7 +5,7 @@
 \alias{lives_low_birth_weight}
 \title{Percentage of Babies Born Not at a Healthy Birth Weight (2022-2023)}
 \format{
-A data frame with 32 rows and 3 variables:
+A data frame with 11 rows and 3 variables:
 \describe{
 \item{ltla24_code}{Local Authority Code}
 \item{low_birth_weight_percentage}{Percentage of babies born not at a healthy birth weight}
