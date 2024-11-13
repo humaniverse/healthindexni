@@ -11,5 +11,6 @@
 #' ...
 #' }
 #' @source \url{https://www.publichealth.hscni.net/publications/statistical-profile-childrens-health-northern-ireland-202223}
+#'
 "lives_low_birth_weight"
 
