@@ -10,7 +10,7 @@
 | Healthy Lives | Smoking | 2022-23 | [Health Survey Northern Ireland](https://www.health-ni.gov.uk/publications/health-survey-northern-ireland-first-results-202223) | :x: | :heavy_exclamation_mark: - The data is at the Health and Social Care Trusts level | :x: |
 | Healthy Lives | Early Years Development | NA | [NISRA](https://datavis.nisra.gov.uk/dissemination/NINIS-redirect.html) | [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :heavy_exclamation_mark: Data unavailable - contact statistics@education-ni.gov.uk  | :x: |
 | Healthy Lives | GCSE Achievement | 2018 | [NISRA](https://www.ninis2.nisra.gov.uk) | [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :heavy_check_mark: | :heavy_check_mark: |
-| Healthy Lives | Pupil Absence | 2017 | [NISRA](https://www.ninis2.nisra.gov.uk) | [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :heavy_check_mark: | :heavy_check_mark: |
+| Healthy Lives | Pupil Absence | 2021/22 | [NISRA](https://data.nisra.gov.uk/) | [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :heavy_check_mark: Indicator: Percentage of unauthorised school absences| :heavy_check_mark: |
 | Healthy Lives | Young People's Education, Employment and Training | 2018 | [NISRA](https://www.ninis2.nisra.gov.uk) | [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :heavy_check_mark: | :heavy_check_mark: |
 | Healthy Lives | Hypertension | 2020 | [NISRA](https://www.ninis2.nisra.gov.uk) | [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :heavy_check_mark: | :heavy_check_mark: |
 | Healthy Lives | Overweight and Obesity in Adults | :x: - only available for 2015 | :x: | :x: | :x: | :x: |
