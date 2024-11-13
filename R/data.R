@@ -2,7 +2,7 @@
 #'
 #' A dataset containing percentage babies born not at a healthy birth weight.
 #'
-#' @format A data frame with 32 rows and 3 variables:
+#' @format A data frame with 11 rows and 3 variables:
 #' \describe{
 #' \item{ltla24_code}{Local Authority Code}
 #' \item{low_birth_weight_percentage}{Percentage of babies born not at a healthy birth weight}
