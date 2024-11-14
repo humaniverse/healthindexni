@@ -1,29 +1,34 @@
+# ---- Load packages ----
 library(tidyverse)
-library(httr)
-library(readODS)
 
-GET(
-  "https://www.ninis2.nisra.gov.uk/Download/Children%20Education%20and%20Skills/School%20Leavers%20(administrative%20geographies).ods",
-  write_disk(tf <- tempfile(fileext = ".ods"))
-)
+# ---- Get and clean data ----
+# Young Peoples Training, Education, and Employment
+# Source: https://data.nisra.gov.uk/
+url <- "https://ws-data.nisra.gov.uk/public/api.restful/PxStat.Data.Cube_API.ReadDataset/DESLSDLGD/CSV/1.0/"
+young_peoples_raw <- read_csv(url)
 
-raw <-
-  read_ods(
-    tf,
-    sheet = "LGD2014",
-    range = "A4:S15"
-  )
-
-raw_tibble <-
-  raw |>
-  as_tibble()
-
-young_people <-
-  raw_tibble |>
+lives_young_peoples_training <- young_peoples_raw |>
+  filter(
+    UNIT == "%",
+    FSME == "All",
+    `Academic Year` == "2022/23",
+    `Statistic Label` %in% c(
+      "% of School Leavers with Destination: Higher Education",
+      "% of School Leavers with Destination: Further Education",
+      "% of School Leavers with Destination: Employment",
+      "% of School Leavers with Destination: Training"
+    )
+  ) |>
+  group_by(LGD2014) |>
+  mutate(young_peoples_eet_percentage = sum(VALUE, na.rm = TRUE)) |>
+  distinct(LGD2014, .keep_all = TRUE) |>
   select(
-    lad_code = `LGD2014 Code`,
-    young_people_unemployed_unknown_percent = `Destination: Unemployed/Unknown (%)`
-  )
+    ltla24_code = LGD2014,
+    young_peoples_eet_percentage,
+    year = `Academic Year`
+  ) |>
+  ungroup() |>
+  slice(-12)
 
-# Save
-write_rds(young_people, "data/vulnerability/health-inequalities/northern-ireland/healthy-lives/young-peoples-training.rds")
+# ---- Save output to data/ folder ----
+usethis::use_data(lives_young_peoples_training, overwrite = TRUE)
