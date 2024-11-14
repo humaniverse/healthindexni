@@ -22,14 +22,14 @@
 | Healthy Lives | Infant Mortality | 2017-2019 | [NISRA](https://www.ninis2.nisra.gov.uk) | [OGL3](https://www.nisra.gov.uk/crown-copyright) | :heavy_check_mark: | :heavy_check_mark: |
 | Healthy Lives | Low Birth Weight | 2022-23 | [Public Health Agency](https://www.publichealth.hscni.net/publications/statistical-profile-childrens-health-northern-ireland-202223) | [OGL3](https://www.nisra.gov.uk/crown-copyright) | :heavy_check_mark: Indicator: Percentage of infants born with low birth weight (<2,500g) | :heavy_check_mark: |
 | Healthy Lives | Overweight and Obesity in Children | 2017/18-19/20 | [NISRA](https://www.ninis2.nisra.gov.uk) | [OGL3](https://www.nisra.gov.uk/crown-copyright) | :heavy_check_mark: | :heavy_check_mark: |
-| Healthy Lives | Teenage Pregnancy | 2019 | [NISRA](https://www.ninis2.nisra.gov.uk) | [OGL3](https://www.nisra.gov.uk/crown-copyright) | :heavy_check_mark: | :heavy_check_mark: |
+| Healthy Lives | Teenage Pregnancy | 2020-22 | [NISRA](https://data.nisra.gov.uk/) | [OGL3](https://www.nisra.gov.uk/crown-copyright) | :heavy_check_mark: Indicator: Rate of teenage pregnancies per 1,000 | :heavy_check_mark: |
 | Healthy Lives | Unemployment | 2020 | [NISRA](https://www.ninis2.nisra.gov.uk) | [OGL3](https://www.nisra.gov.uk/crown-copyright) | :heavy_check_mark: | :heavy_check_mark: |
 | Healthy Lives | Job-related Training | :x: | :x: | :x: | :x: - data unavailable | :x: |
 | Healthy Lives | Low Pay | :x: | :x: | :x: | :x: - data unavailable | :x: |
 | Healthy Lives | Workplace Safety | :x: | :x: | :x: | :x: - data unavailable | :x: |
 | Healthy People | Difficulty Completing Activities of Daily Living (ADLs) | 2017 | [NISRA](https://www.ninis2.nisra.gov.uk) | [OGL3](https://www.nisra.gov.uk/crown-copyright) | :heavy_check_mark: - Standardised ratio of people with a long-term health problem or disability (Excluding Mental Health problems) was used as proxy | :heavy_check_mark: |
 | Healthy People | Disability Impacting Daily Activities | :x: | :x: | :x: | :x: - data unavailable | :x: | 
-| Healthy People | Fraility | :x: | :x: | :x: | :x: - data unavailable | :x: | 
+| Healthy People | Frailty | :x: | :x: | :x: | :x: - data unavailable | :x: | 
 | Healthy People | Children’s Social, Emotional and Mental Health | :x: | :x: | :x: | :x: - data unavailable | :x: | 
 | Healthy People | Depression | :x: | :x: | :x: | :x: - data unavailable | :x: | 
 | Healthy People | Self-harm | 2014/15-2018/19 | [NISRA](https://www.ninis2.nisra.gov.uk) | [OGL3](https://www.nisra.gov.uk/crown-copyright) | :heavy_check_mark: | :heavy_check_mark: |

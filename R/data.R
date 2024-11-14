@@ -49,3 +49,20 @@
 #' @source \url{https://data.nisra.gov.uk/}
 #'
 "lives_pupil_absence"
+
+#' Rates of teenage pregnancies per 1,000 (2020-22)
+#'
+#' A dataset containing statistics on the rate of teenage pregnancies per 1k.
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{teenage_pregnancies_per_1k}{Rate of teenage pregnancies per 1k where
+#' teenagers are aged between 13 and 19}
+#' \item{year}{3-year aggregated period}
+#'
+#' ...
+#' }
+#' @source \url{https://data.nisra.gov.uk/}
+#'
+"lives_teenage_pregnancy"
