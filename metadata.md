@@ -23,7 +23,7 @@
 | Healthy Lives | Low Birth Weight | 2022-23 | [Public Health Agency](https://www.publichealth.hscni.net/publications/statistical-profile-childrens-health-northern-ireland-202223) | [OGL3](https://www.nisra.gov.uk/crown-copyright) | :heavy_check_mark: Indicator: Percentage of infants born with low birth weight (<2,500g) | :heavy_check_mark: |
 | Healthy Lives | Overweight and Obesity in Children | 2017/18-19/20 | [NISRA](https://www.ninis2.nisra.gov.uk) | [OGL3](https://www.nisra.gov.uk/crown-copyright) | :heavy_check_mark: | :heavy_check_mark: |
 | Healthy Lives | Teenage Pregnancy | 2019 | [NISRA](https://www.ninis2.nisra.gov.uk) | [OGL3](https://www.nisra.gov.uk/crown-copyright) | :heavy_check_mark: | :heavy_check_mark: |
-| Healthy Lives | Unemployment | 2020 | [NISRA](https://www.ninis2.nisra.gov.uk) | [OGL3](https://www.nisra.gov.uk/crown-copyright) | :heavy_check_mark: | :heavy_check_mark: |
+| Healthy Lives | Unemployment | 2023 | [NISRA](https://data.nisra.gov.uk/) | [OGL3](https://www.nisra.gov.uk/crown-copyright) | :heavy_check_mark: Indicator: Percentage of people experiencing unemployment and claiming unemployment-related benefits | :heavy_check_mark: |
 | Healthy Lives | Job-related Training | :x: | :x: | :x: | :x: - data unavailable | :x: |
 | Healthy Lives | Low Pay | :x: | :x: | :x: | :x: - data unavailable | :x: |
 | Healthy Lives | Workplace Safety | :x: | :x: | :x: | :x: - data unavailable | :x: |
