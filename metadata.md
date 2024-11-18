@@ -14,7 +14,7 @@
 | Healthy Lives | Young People's Education, Employment and Training | 2018 | [NISRA](https://www.ninis2.nisra.gov.uk) | [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :heavy_check_mark: | :heavy_check_mark: |
 | Healthy Lives | High Blood Pressure | 2023-24 | [NISRA](https://data.nisra.gov.uk/) | [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :heavy_exclamation_mark: Data only available for raw prevalence rate. Percentage required to best match England's Health Index. | :x: |
 | Healthy Lives | Overweight and Obesity in Adults | :x: - only available for 2015 | :x: | :x: | :x: | :x: |
-| Healthy Lives | Cancer Screening | 2017/18 | [NISRA](https://data.nisra.gov.uk/) | [NISRA](https://data.nisra.gov.uk/) | ❗: - The data (breast, bowel, and cervical cancers) is at the Health and Social Care Trusts level | :x: |
+| Healthy Lives | Cancer Screening | 2022/23 | [Public Health](https://www.publichealth.hscni.net/publications/director-public-health-core-tables-2022) | :x:| ❗: - The data (breast, bowel, and cervical cancers) is at the Health and Social Care Trusts level | :x: |
 | Healthy Lives | Sexual Health | :x: | :x: | :x: | :x: - data unavailable | :x: |
 | Healthy Lives | Vaccination Coverage | :x: | :x: | :x: | :x: - The data is at the Health and Social Care Trusts level | :x: |
 | Healthy Lives | Child Poverty | 2017 | [NISRA](https://www.ninis2.nisra.gov.uk) | [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :heavy_check_mark: | :heavy_check_mark: |
