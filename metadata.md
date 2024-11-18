@@ -10,11 +10,11 @@
 | Healthy Lives | Smoking | 2022-23 | [Health Survey Northern Ireland](https://www.health-ni.gov.uk/publications/health-survey-northern-ireland-first-results-202223) | :x: | :heavy_exclamation_mark: - The data is at the Health and Social Care Trusts level | :x: |
 | Healthy Lives | Early Years Development | NA | [NISRA](https://datavis.nisra.gov.uk/dissemination/NINIS-redirect.html) | [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :heavy_exclamation_mark: Data unavailable - contact statistics@education-ni.gov.uk  | :x: |
 | Healthy Lives | Pupil Absence | 2021/22 | [NISRA](https://data.nisra.gov.uk/) | [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :heavy_check_mark: Indicator: Percentage of unauthorised school absences| :heavy_check_mark: |
-| Healthy Lives | GCSE Achievement | 2022-23 | [NISRA](https://data.nisra.gov.uk/) | [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :heavy_check_mark: Indicator: Percentage of GSCE attainment, including Maths and English (Grades A-C) | :heavy_check_mark: |
+| Healthy Lives | GCSE Achievement | 2022-23 | [NISRA](https://data.nisra.gov.uk/) | [NISRA](https://data.nisra.gov.uk/) | :heavy_check_mark: Indicator: Percentage of GSCE attainment, including Maths and English (Grades A-C) | :heavy_check_mark: |
 | Healthy Lives | Young People's Education, Employment and Training | 2018 | [NISRA](https://www.ninis2.nisra.gov.uk) | [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :heavy_check_mark: | :heavy_check_mark: |
 | Healthy Lives | High Blood Pressure | 2023-24 | [NISRA](https://data.nisra.gov.uk/) | [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :heavy_exclamation_mark: Data only available for raw prevalence rate. Percentage required to best match England's Health Index. | :x: |
 | Healthy Lives | Overweight and Obesity in Adults | :x: - only available for 2015 | :x: | :x: | :x: | :x: |
-| Healthy Lives | Cancer Screening | :x: | :x: | :x: | :x: - The data is at the Health and Social Care Trusts level | :x: |
+| Healthy Lives | Cancer Screening | 2017/18 | [NISRA](https://data.nisra.gov.uk/) | [NISRA](https://data.nisra.gov.uk/) | ❗: - The data (breast, bowel, and cervical cancers) is at the Health and Social Care Trusts level | :x: |
 | Healthy Lives | Sexual Health | :x: | :x: | :x: | :x: - data unavailable | :x: |
 | Healthy Lives | Vaccination Coverage | :x: | :x: | :x: | :x: - The data is at the Health and Social Care Trusts level | :x: |
 | Healthy Lives | Child Poverty | 2017 | [NISRA](https://www.ninis2.nisra.gov.uk) | [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :heavy_check_mark: | :heavy_check_mark: |
