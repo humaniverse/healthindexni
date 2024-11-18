@@ -1,3 +1,22 @@
+#' Percentage of Absolute Child Poverty (2017)
+#'
+#' A dataset containing statistics on the percentage of children (aged 15 and
+#' under) living in absolute low income families in each Council, 2017.
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{child_poverty_percentage}{Percentage of children 15 and under living in
+#' absolute low incomes families (where a household's income is below 60% of
+#' the median income in 2010/11, adjusted for inflation).}
+#' \item{year}{Year}
+#'
+#' ...
+#' }
+#' @source \url{https://data.nisra.gov.uk/}
+#'
+"lives_child_poverty"
+
 #' Percentage GSCE Attainment, including Maths and English (2022/23)
 #'
 #' A dataset containing statistics on the percentage of GSCE attainment,
