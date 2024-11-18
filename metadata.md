@@ -16,7 +16,7 @@
 | Healthy Lives | Overweight and Obesity in Adults | :x: - only available for 2015 | :x: | :x: | :x: | :x: |
 | Healthy Lives | Cancer Screening | 2022/23 | [Public Health](https://www.publichealth.hscni.net/publications/director-public-health-core-tables-2022) | :x:| ❗: - The data (breast, bowel, and cervical cancers) is at the Health and Social Care Trusts level | :x: |
 | Healthy Lives | Sexual Health | :x: | :x: | :x: | :x: - data unavailable | :x: |
-| Healthy Lives | Vaccination Coverage | :x: | :x: | :x: | :x: - The data is at the Health and Social Care Trusts level | :x: |
+| Healthy Lives | Vaccination Coverage | 2022/23 | [Public Health](https://www.publichealth.hscni.net/publications/director-public-health-core-tables-2022) | :x: | ❗: - The data is at the Health and Social Care Trusts level | :x: |
 | Healthy Lives | Child Poverty | 2017 | [NISRA](https://www.ninis2.nisra.gov.uk) | [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :heavy_check_mark: | :heavy_check_mark: |
 | Healthy Lives | Children in State Care | :x: | :x: | :x: | :x: - The data is at the Health and Social Care Trusts level | :x: |
 | Healthy Lives | Infant Mortality | 2018-2022 | [NISRA](https://data.nisra.gov.uk/) | [OGL3](https://www.nisra.gov.uk/crown-copyright) | :heavy_exclamation_mark: Data only present at HSC level| :x: |
