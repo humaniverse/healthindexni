@@ -14,7 +14,7 @@
 | Healthy Lives | Young People's Education, Employment and Training | 2018 | [NISRA](https://www.ninis2.nisra.gov.uk) | [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :heavy_check_mark: | :heavy_check_mark: |
 | Healthy Lives |Cardiovascular Conditions | 2023/24 | [NISRA](https://data.nisra.gov.uk/k) | [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :heavy_exclamation_mark: Data only available as separate conditions (CHD, COPD, Heart Failure 1 & 3, Stroke and TIA) as a rate per 1,000. To be comparable to England's Index must be shown as a %. To review at the end. | :x: |
 | Healthy Lives | High Blood Pressure | 2023-24 | [NISRA](https://data.nisra.gov.uk/) | [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :heavy_exclamation_mark: Data only available for raw prevalence rate. Percentage required to best match England's Health Index. | :x: |
-| Healthy Lives | Overweight and Obesity in Adults | :x: - only available for 2015 | :x: | :x: | :x: | :x: |
+| Healthy Lives | Overweight and Obesity in Adults | :x: | :x: | :x: | :x: - Data unavailable. | :x: |
 | Healthy Lives | Cancer Screening | 2022/23 | [Public Health](https://www.publichealth.hscni.net/publications/director-public-health-core-tables-2022) | :x:| ❗: - The data (breast, bowel, and cervical cancers) is at the Health and Social Care Trusts level | :x: |
 | Healthy Lives | Sexual Health | :x: | :x: | :x: | :x: - Data unavailable. | :x: |
 | Healthy Lives | Vaccination Coverage | 2022/23 | [Public Health](https://www.publichealth.hscni.net/publications/director-public-health-core-tables-2022) | :x: | ❗: - The data is at the Health and Social Care Trusts level | :x: |
