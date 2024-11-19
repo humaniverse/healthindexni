@@ -26,7 +26,7 @@
 | Healthy Lives | Teenage Pregnancy | 2020-22 | [NISRA](https://data.nisra.gov.uk/) | [OGL3](https://www.nisra.gov.uk/crown-copyright) | :heavy_check_mark: Indicator: Rate of teenage pregnancies per 1,000 | :heavy_check_mark: |
 | Healthy Lives | Unemployment | 2020 | [NISRA](https://www.ninis2.nisra.gov.uk) | [OGL3](https://www.nisra.gov.uk/crown-copyright) | :heavy_check_mark: | :heavy_check_mark: |
 | Healthy Lives | Job-related Training | :x: | :x: | :x: | :x: - data unavailable | :x: |
-| Healthy Lives | Low Pay | :x: | :x: | :x: | :x: - data unavailable | :x: |
+| Healthy Lives | Low Pay | :x: | :x: | :x: | :x: Indicator not overtly present in England's HI. To review at the end (and likely remove) | :x: |
 | Healthy Lives | Workplace Safety | :x: | :x: | :x: | :x: - data unavailable | :x: |
 | Healthy People | Difficulty Completing Activities of Daily Living (ADLs) | 2017 | [NISRA](https://www.ninis2.nisra.gov.uk) | [OGL3](https://www.nisra.gov.uk/crown-copyright) | :heavy_check_mark: - Standardised ratio of people with a long-term health problem or disability (Excluding Mental Health problems) was used as proxy | :heavy_check_mark: |
 | Healthy People | Disability Impacting Daily Activities | :x: | :x: | :x: | :x: - data unavailable | :x: | 
