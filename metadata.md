@@ -31,7 +31,7 @@
 | Healthy People | Difficulty Completing Activities of Daily Living (ADLs) | 2017 | [NISRA](https://www.ninis2.nisra.gov.uk) | [OGL3](https://www.nisra.gov.uk/crown-copyright) | :heavy_check_mark: - Standardised ratio of people with a long-term health problem or disability (Excluding Mental Health problems) was used as proxy | :heavy_check_mark: |
 | Healthy People | Disability Impacting Daily Activities | :x: | :x: | :x: | :x: - data unavailable | :x: | 
 | Healthy People | Frailty | :x: | :x: | :x: | :x: Data unavailable. | :x: | 
-| Healthy People | Children’s Social, Emotional and Mental Health | :x: | :x: | :x: | :x: - data unavailable | :x: | 
+| Healthy People | Children’s Social, Emotional and Mental Health | 2020 | [Youth Wellbeing Prevalence Survey](https://online.hscni.net/our-work/social-care-and-children/children-and-young-people/youth-wellbeing-prevalence-survey-2020/) | :x: | :x: (Raw) data unavailable and only at HSC level | :x: | 
 | Healthy People | Depression | :x: | :x: | :x: | :x: - data unavailable | :x: | 
 | Healthy People | Self-harm | 2014/15-2018/19 | [NISRA](https://www.ninis2.nisra.gov.uk) | [OGL3](https://www.nisra.gov.uk/crown-copyright) | :heavy_check_mark: | :heavy_check_mark: |
 | Healthy People | Suicides | 2019 | [NISRA](https://www.ninis2.nisra.gov.uk) | [OGL3](https://www.nisra.gov.uk/crown-copyright) | :heavy_check_mark: | :heavy_check_mark: |
