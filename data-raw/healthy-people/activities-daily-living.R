@@ -1,25 +1,33 @@
+# ---- Load packages ----
 library(tidyverse)
-library(httr)
-library(readODS)
+library(readxl)
 
-GET(
-  "https://www.ninis2.nisra.gov.uk/Download/Deprivation/Northern%20Ireland%20Multiple%20Deprivation%20Measure%202017%20-%20Indicators%20(administrative%20geographies).ods",
-  write_disk(tf <- tempfile(fileext = ".ods"))
-)
+# ---- Get data and clean ----
+# Disability Daily Activities
+# Source: https://www.nisra.gov.uk/publications/census-2021-main-statistics-health-disability-and-unpaid-care-tables
 
-raw <-
-  read_ods(
-    tf,
-    sheet = "LGD2014",
-    range = "B4:AM15"
-  )
+url <- "https://www.nisra.gov.uk/system/files/statistics/census-2021-ms-d02.xlsx"
 
-adl <-
-  raw |>
-  as_tibble() |>
+tf <- tempfile(fileext = ".xlsx")
+download.file(url, tf, mode = "wb")
+
+disability_daily_activities_raw <- read_excel(tf, sheet = 4, skip = 22)
+
+people_disability_daily_activities <- disability_daily_activities_raw |>
+  mutate(
+    disability_activities_limited_percentage = (
+      `Usual residents aged 15-39 years: \r\nDay-to-day activities limited a lot` +
+        `Usual residents aged 15-39 years: \r\nDay-to-day activities limited a little` +
+        `Usual residents aged 40-64 years: \r\nDay-to-day activities limited a lot` +
+        `Usual residents aged 40-64 years: \r\nDay-to-day activities limited a little`)
+    * 100,
+    year = "2021"
+  ) |>
   select(
-    lad_code = `LGD2014 Code`,
-    limited_adl_standardised_ratio = `Standardised ratio of people with a long-term health problem or disability\n(Excluding Mental Health problems)\n(NI = 100)`
+    ltla24_code = `Geography code`,
+    disability_activities_limited_percentage,
+    year
   )
 
-write_rds(adl, "data/vulnerability/health-inequalities/northern-ireland/healthy-people/activities-daily-living.rds")
+# ---- Save output to data/ folder ----
+usethis::use_data(people_disability_daily_activities, overwrite = TRUE)

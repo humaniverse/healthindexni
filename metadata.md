@@ -28,8 +28,8 @@
 | Healthy Lives | Job-related Training | 2021 | [NISRA](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fwww.nisra.gov.uk%2Fsystem%2Ffiles%2Fstatistics%2FLFS-Education-And-Training-Quarterly-aj21.ods&wdOrigin=BROWSELINK) | :x: | :x: - Data unavailable at a detailed level | :x: |
 | Healthy Lives | Low Pay | :x: | :x: | :x: | :x: Indicator not overtly present in England's HI. To review at the end (and likely remove) | :x: |
 | Healthy Lives | Workplace Safety | :x: | :x: | :x: | :x: - Data unavailable. | :x: |
-| Healthy People | Difficulty Completing Activities of Daily Living (ADLs) | 2017 | [NISRA](https://www.ninis2.nisra.gov.uk) | [OGL3](https://www.nisra.gov.uk/crown-copyright) | :heavy_check_mark: - Standardised ratio of people with a long-term health problem or disability (Excluding Mental Health problems) was used as proxy | :heavy_check_mark: |
-| Healthy People | Disability Impacting Daily Activities | :x: | :x: | :x: | :x: - data unavailable | :x: | 
+| Healthy People | Difficulty Completing Activities of Daily Living (ADLs) | NA | :x: | :x:| :heavy_exclamation_mark: This indicator not overtly present in England's Health Index and may be substituted by disability/long-term health conditions impacting daily activities. To check at the end. | :x: |
+| Healthy People | Disability Impacting Daily Activities | 2021 | [NISRA](https://www.nisra.gov.uk/publications/census-2021-main-statistics-health-disability-and-unpaid-care-tables) | [OGL](https://www.nisra.gov.uk/crown-copyright) | :heavy_check_mark: Indicator: Percentage of people aged 15-64 with long-Term health problem/disability that limits daily activities by a lot or by a little | :heavy_check_mark: | 
 | Healthy People | Frailty | :x: | :x: | :x: | :x: - data unavailable | :x: | 
 | Healthy People | Children’s Social, Emotional and Mental Health | :x: | :x: | :x: | :x: - data unavailable | :x: | 
 | Healthy People | Depression | :x: | :x: | :x: | :x: - data unavailable | :x: | 
