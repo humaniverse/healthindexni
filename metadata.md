@@ -30,8 +30,8 @@
 | Healthy Lives | Workplace Safety | :x: | :x: | :x: | :x: - Data unavailable. | :x: |
 | Healthy People | Difficulty Completing Activities of Daily Living (ADLs) | NA | :x: | :x:| :heavy_exclamation_mark: This indicator not overtly present in England's Health Index and may be substituted by disability/long-term health conditions impacting daily activities. To check at the end. | :x: |
 | Healthy People | Disability Impacting Daily Activities | 2021 | [NISRA](https://www.nisra.gov.uk/publications/census-2021-main-statistics-health-disability-and-unpaid-care-tables) | [OGL](https://www.nisra.gov.uk/crown-copyright) | :heavy_check_mark: Indicator: Percentage of people aged 15-64 with long-Term health problem/disability that limits daily activities by a lot or by a little | :heavy_check_mark: | 
-| Healthy People | Frailty | :x: | :x: | :x: | :x: - data unavailable | :x: | 
-| Healthy People | Children’s Social, Emotional and Mental Health | :x: | :x: | :x: | :x: - data unavailable | :x: | 
+| Healthy People | Frailty | :x: | :x: | :x: | :x: Data unavailable. | :x: | 
+| Healthy People | Children’s Social, Emotional and Mental Health | 2020 | [Youth Wellbeing Prevalence Survey](https://online.hscni.net/our-work/social-care-and-children/children-and-young-people/youth-wellbeing-prevalence-survey-2020/) | :x: | :x: (Raw) data unavailable and only at HSC level | :x: | 
 | Healthy People | Depression | :x: | :x: | :x: | :x: - data unavailable | :x: | 
 | Healthy People | Self-harm | 2014/15-2018/19 | [NISRA](https://www.ninis2.nisra.gov.uk) | [OGL3](https://www.nisra.gov.uk/crown-copyright) | :heavy_check_mark: | :heavy_check_mark: |
 | Healthy People | Suicides | 2019 | [NISRA](https://www.ninis2.nisra.gov.uk) | [OGL3](https://www.nisra.gov.uk/crown-copyright) | :heavy_check_mark: | :heavy_check_mark: |
