@@ -30,7 +30,7 @@
 | Healthy Lives | Workplace Safety | :x: | :x: | :x: | :x: - Data unavailable. | :x: |
 | Healthy People | Difficulty Completing Activities of Daily Living (ADLs) | 2017 | [NISRA](https://www.ninis2.nisra.gov.uk) | [OGL3](https://www.nisra.gov.uk/crown-copyright) | :heavy_check_mark: - Standardised ratio of people with a long-term health problem or disability (Excluding Mental Health problems) was used as proxy | :heavy_check_mark: |
 | Healthy People | Disability Impacting Daily Activities | :x: | :x: | :x: | :x: - data unavailable | :x: | 
-| Healthy People | Frailty | :x: | :x: | :x: | :x: - data unavailable | :x: | 
+| Healthy People | Frailty | :x: | :x: | :x: | :x: Data unavailable. | :x: | 
 | Healthy People | Children’s Social, Emotional and Mental Health | :x: | :x: | :x: | :x: - data unavailable | :x: | 
 | Healthy People | Depression | :x: | :x: | :x: | :x: - data unavailable | :x: | 
 | Healthy People | Self-harm | 2014/15-2018/19 | [NISRA](https://www.ninis2.nisra.gov.uk) | [OGL3](https://www.nisra.gov.uk/crown-copyright) | :heavy_check_mark: | :heavy_check_mark: |
