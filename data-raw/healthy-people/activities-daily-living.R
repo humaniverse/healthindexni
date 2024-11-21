@@ -11,16 +11,21 @@ url <- "https://www.nisra.gov.uk/system/files/statistics/census-2021-ms-d02.xlsx
 tf <- tempfile(fileext = ".xlsx")
 download.file(url, tf, mode = "wb")
 
-disability_daily_activities_raw <- read_excel(tf, sheet = 4, skip = 22)
+disability_daily_activities_raw <- read_excel(tf, sheet = 4, skip = 8)
 
 people_disability_daily_activities <- disability_daily_activities_raw |>
+  slice(1:11) |>
   mutate(
-    disability_activities_limited_percentage = (
+    across(3:22, as.numeric),
+    disability_activities_limited_total = (
       `Usual residents aged 15-39 years: \r\nDay-to-day activities limited a lot` +
         `Usual residents aged 15-39 years: \r\nDay-to-day activities limited a little` +
         `Usual residents aged 40-64 years: \r\nDay-to-day activities limited a lot` +
-        `Usual residents aged 40-64 years: \r\nDay-to-day activities limited a little`)
-    * 100,
+        `Usual residents aged 40-64 years: \r\nDay-to-day activities limited a little`),
+    population_total = `Usual residents aged 15-39 years` +
+      `Usual residents aged 40-64 years`,
+    disability_activities_limited_percentage = (
+      disability_activities_limited_total / population_total) * 100,
     year = "2021"
   ) |>
   select(
