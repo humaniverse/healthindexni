@@ -66,3 +66,24 @@
 #' @source \url{https://data.nisra.gov.uk/}
 #'
 "lives_teenage_pregnancy"
+
+#' Mortality all causes rate per 100k (2020-22)
+#'
+#' A dataset containing statistics from an age-sex standardised rate for all
+#' causes of mortality per 100k, by Council (2020-22).
+#'
+#' To note: England's Health Index uses a single year to calculate mortality rates
+#' from all causes. Northern Ireland only has 3-year aggregate data available.
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{death_rate_per_100k}{age-sex standardised rate for all causes of
+#' mortality per 100k}
+#' \item{year}{3-year aggregated period}
+#'
+#' ...
+#' }
+#' @source \url{https://data.nisra.gov.uk/}
+#'
+"people_all_mortality"
