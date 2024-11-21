@@ -15,17 +15,22 @@ disability_daily_activities_raw <- read_excel(tf, sheet = 4, skip = 8)
 
 people_disability_daily_activities <- disability_daily_activities_raw |>
   slice(1:11) |>
+  mutate(across(3:22, as.numeric)) |>
+  rowwise() |>
   mutate(
-    across(3:22, as.numeric),
-    disability_activities_limited_total = (
-      `Usual residents aged 15-39 years: \r\nDay-to-day activities limited a lot` +
-        `Usual residents aged 15-39 years: \r\nDay-to-day activities limited a little` +
-        `Usual residents aged 40-64 years: \r\nDay-to-day activities limited a lot` +
-        `Usual residents aged 40-64 years: \r\nDay-to-day activities limited a little`),
-    population_total = `Usual residents aged 15-39 years` +
-      `Usual residents aged 40-64 years`,
+    disability_activities_limited_total = sum(
+      `Usual residents aged 15-39 years: \r\nDay-to-day activities limited a lot`,
+      `Usual residents aged 15-39 years: \r\nDay-to-day activities limited a little`,
+      `Usual residents aged 40-64 years: \r\nDay-to-day activities limited a lot`,
+      `Usual residents aged 40-64 years: \r\nDay-to-day activities limited a little`
+    ),
+    population_total = sum(`Usual residents aged 15-39 years`, `Usual residents aged 40-64 years`)
+  ) |>
+  ungroup() |>
+  mutate(
     disability_activities_limited_percentage = (
-      disability_activities_limited_total / population_total) * 100,
+      disability_activities_limited_total / population_total
+    ) * 100,
     year = "2021"
   ) |>
   select(
