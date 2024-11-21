@@ -1,26 +1,25 @@
+# ---- Load packages ----
 library(tidyverse)
-library(httr)
-library(readODS)
+library(geographr)
 
-GET(
-  "https://www.ninis2.nisra.gov.uk/Download/Population/Births%20(administrative%20geographies).ods",
-  write_disk(tf <- tempfile(fileext = ".ods"))
-)
+# ---- Get and clean data ----
+# Teenage pregnancies
+# Source: https://data.nisra.gov.uk/
+url <- "https://ws-data.nisra.gov.uk/public/api.restful/PxStat.Data.Cube_API.ReadDataset/TEENBRLGD/CSV/1.0/"
+teenage_pregnancy_raw <- read_csv(url)
 
-raw <-
-  read_ods(
-    tf,
-    sheet = "LGD2014",
-    range = "B4:I15"
-  )
-
-teenage_pregnancies <-
-  raw |>
-  as_tibble() |>
+lives_teenage_pregnancy <- teenage_pregnancy_raw |>
+  filter(
+    `Grouped Year` == "2020-22",
+    `Statistic Label` ==
+      "Births registered to mothers aged under 20 per 1,000 population"
+  ) |>
   select(
-    lad_code = `LGD2014 Code`,
-    teenage_pregnancies_per_1000 = `Birth rate to teenage mothers per 1,000 female population aged 13-19 years`
-  )
+    ltla24_code = LGD2014,
+    teenage_pregnancies_per_1k = VALUE,
+    year = `Grouped Year`
+  ) |>
+  slice(-12)
 
-# Save
-write_rds(teenage_pregnancies, "data/vulnerability/health-inequalities/northern-ireland/healthy-lives/teenage-pregnancies.rds")
+# ---- Save output to data/ folder ----
+usethis::use_data(lives_teenage_pregnancy, overwrite = TRUE)
