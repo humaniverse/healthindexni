@@ -67,6 +67,22 @@
 #'
 "lives_teenage_pregnancy"
 
+#' Average Measurement of Anxiety Out of 10 (2022-23)
+#'
+#' A dataset containing statistics of personal ratings on feelings of
+#' anxiety out of 10, by Council (2022-23).
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{anxiety_score_out_of_10}{Average personal ratings on feelings of
+#' anxiety out of 10 - 10 is most anxious, 1 is least anxious}
+#' \item{year}{Time period}
+#' ...
+#' }
+#' @source \url{https://www.ons.gov.uk/datasets/wellbeing-local-authority/editions/time-series/versions/4}
+"people_anxiety"
+
 #' Percentage of People Aged 15-64 with Long-Term Health Problem/Disability
 #' that Limits Daily Activities
 #'
