@@ -33,7 +33,7 @@
 | Healthy People | Frailty | :x: | :x: | :x: | :x: Data unavailable. | :x: | 
 | Healthy People | Children’s Social, Emotional and Mental Health | 2020 | [Youth Wellbeing Prevalence Survey](https://online.hscni.net/our-work/social-care-and-children/children-and-young-people/youth-wellbeing-prevalence-survey-2020/) | :x: | :x: (Raw) data unavailable and only at HSC level | :x: | 
 | Healthy People | Depression | :x: | :x: | :x: | :x: - data unavailable | :x: | 
-| Healthy People | Self-harm | 2014/15-2018/19 | [NISRA](https://www.ninis2.nisra.gov.uk) | [OGL3](https://www.nisra.gov.uk/crown-copyright) | :heavy_check_mark: | :heavy_check_mark: |
+| Healthy People | Self-harm | 2018/19-2022/23 | [NISRA](https://data.nisra.gov.uk/) | [OGL3](https://www.nisra.gov.uk/crown-copyright) | :heavy_check_mark: Indicator: Rate of self-harm related admissions per 100,000, standardised by age and sex. | :heavy_check_mark: |
 | Healthy People | Suicides | 2019 | [NISRA](https://www.ninis2.nisra.gov.uk) | [OGL3](https://www.nisra.gov.uk/crown-copyright) | :heavy_check_mark: | :heavy_check_mark: |
 | Healthy People | Avoiable Deaths | 2015-19 | [NISRA](https://www.ninis2.nisra.gov.uk) | [OGL3](https://www.nisra.gov.uk/crown-copyright) | :heavy_check_mark: | :heavy_check_mark: |
 | Healthy People | Healthy Life Expectancy | 2016-2018 | [ONS](https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/healthandlifeexpectancies/datasets/healthstatelifeexpectancyatbirthandatage65bylocalareasuk) | [OGL3](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/) | :heavy_check_mark: | :heavy_check_mark: |
