@@ -50,6 +50,23 @@
 #'
 "lives_pupil_absence"
 
+#' Rates of teenage pregnancies per 1,000 (2020-22)
+#'
+#' A dataset containing statistics on the rate of teenage pregnancies per 1k.
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{teenage_pregnancies_per_1k}{Rate of teenage pregnancies per 1k where
+#' teenagers are aged between 13 and 19}
+#' \item{year}{3-year aggregated period}
+#'
+#' ...
+#' }
+#' @source \url{https://data.nisra.gov.uk/}
+#'
+"lives_teenage_pregnancy"
+
 #' Percentage of Young People in Education, Employment, and Training (2022/23)
 #'
 #' A dataset containing statistics on the percentage of young people (aged 16-18)
@@ -67,3 +84,24 @@
 #' @source \url{https://data.nisra.gov.uk/}
 #'
 "lives_young_peoples_training"
+
+#' Percentage of People Aged 15-64 with Long-Term Health Problem/Disability
+#' that Limits Daily Activities
+#'
+#' A dataset containing statistics on the percentage of people aged 15-64 with
+#' long-term health problem/disability that limits daily activities, by Council
+#' (2021).
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{disability_activities_limited_percentage}{percentage of people aged 15-64
+#' with long-term health problem/disability that limits daily activities by a
+#' lot or by a little.}
+#' \item{year}{Year}
+#'
+#' ...
+#' }
+#' @source \url{https://www.nisra.gov.uk/publications/census-2021-main-statistics-health-disability-and-unpaid-care-tables}
+#'
+"people_disability_daily_activities"
