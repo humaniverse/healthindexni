@@ -87,3 +87,19 @@
 #' @source \url{https://www.nisra.gov.uk/publications/census-2021-main-statistics-health-disability-and-unpaid-care-tables}
 #'
 "people_disability_daily_activities"
+
+#' Average Measurement of Happiness Out of 10 (2022-23)
+#'
+#' A dataset containing statistics of personal ratings on feelings of
+#' happiness out of 10, by Council (2022-23).
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{happiness_score_out_of_10}{Average personal ratings on feelings of
+#' happiness out of 10 - 10 is most happy, 1 is least happy}
+#' \item{year}{Time period}
+#' ...
+#' }
+#' @source \url{https://www.ons.gov.uk/datasets/wellbeing-local-authority/editions/time-series/versions/4}
+"people_happiness"
