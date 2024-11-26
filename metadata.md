@@ -55,7 +55,7 @@
 | Healthy People | Respiratory Conditions: Asthma | 2023-24 | [NISRA](https://data.nisra.gov.uk/) | [OGL3](https://www.nisra.gov.uk/crown-copyright) | :heavy_exclamation_mark: Data only available for raw prevalence rate. Percentage required to best match England's Health Index. Respiratory Conditions is treated as 1 indicator. | :x: |
 | Healthy People | Respiratory Conditions: COPD | 2023-24 | [NISRA](https://data.nisra.gov.uk/) | [OGL3](https://www.nisra.gov.uk/crown-copyright) | :heavy_exclamation_mark: Data only available for raw prevalence rate. Percentage required to best match England's Health Index. Respiratory Conditions is treated as 1 indicator. | :x: |
 | Healthy Places | Private Outdoor Space | :x: | :x: | :x: | :x: - data unavailable | :x: |
-| Healthy Places | Public Green Space | :x: | :x: | :x: | :x: - data unavailable | :x: |
+| Healthy Places | Public Green Space | :x: | :x: | :x: | :heavy_exclamation_mark: Indicator not overtly present in England's Health Index. To review at the end. | :x: |
 | Healthy Places | Household Overcrowding | 2017 | [NISRA](https://www.ninis2.nisra.gov.uk) | [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :heavy_check_mark: | :heavy_check_mark: |
 | Healthy Places | Housing Affordability | :x: | :x: | :x: | :x: - data unavailable | :x: |
 | Healthy Places | Rough Sleeping | :x: | :x: | :x: | :x: - data unavailable | :x: |
