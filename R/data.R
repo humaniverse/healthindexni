@@ -87,3 +87,21 @@
 #' @source \url{https://www.nisra.gov.uk/publications/census-2021-main-statistics-health-disability-and-unpaid-care-tables}
 #'
 "people_disability_daily_activities"
+
+#' Rates of Personal Crime per 1,000 (2017)
+#'
+#' A dataset containing statistics on 'personal crime' per 1,000 people in
+#' Northern Irish Council Areas. 'Personal crime' is defined as violence against
+#' the person, sexual offences, robbery, theft, criminal damage, and arson.
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{personal_crime_per_1k}{Number of personal crimes per 1,000 people}
+#' \item{year}{Year}
+#'
+#' ...
+#' }
+#' @source \url{https://data.nisra.gov.uk/}
+#'
+"places_personal_crime"
