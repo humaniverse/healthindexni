@@ -108,3 +108,24 @@
 #' @source \url{https://openstreetmap.org/}
 #'
 "places_gp_travel_time"
+
+#' Travel time to pharmacies
+#'
+#' A dataset containing the average (median) travel time (in minutes) to the nearest
+#' pharmacy in each Local Government District. This is based on the travel time to the
+#' nearest GP in each Super Data Zone within a Local Government District.
+#'
+#' Travel times are calculated using the TravelTime API (https://traveltime.com/apis/distance-matrix)
+#' and are based on travelling by public transport on a weekday morning.
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#'   \item{lgd14_code}{Local Authority Code}
+#'   \item{pharmacy_median_travel_time}{Median travel time (in minutes) to the nearest
+#'   pharmacy among all the Super Data Zones within a Local Authority}
+#'   \item{year}{Year the data was last updated}
+#'   ...
+#' }
+#' @source \url{https://openstreetmap.org/}
+#'
+"places_pharmacy_travel_time"
