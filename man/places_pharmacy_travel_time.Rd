@@ -23,7 +23,7 @@ places_pharmacy_travel_time
 \description{
 A dataset containing the average (median) travel time (in minutes) to the nearest
 pharmacy in each Local Government District. This is based on the travel time to the
-nearest GP in each Super Data Zone within a Local Government District.
+nearest sports centre in each Super Data Zone within a Local Government District.
 }
 \details{
 Travel times are calculated using the TravelTime API (https://traveltime.com/apis/distance-matrix)
