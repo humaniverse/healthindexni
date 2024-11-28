@@ -15,10 +15,10 @@ places_personal_crime <- personal_crime_raw |>
     "Rate of Theft (per 1,000 population)",
     "Rate of Criminal Damage and Arson (per 1,000 population)"
   )) |>
-  group_by(LGD2014) |>
-  mutate(personal_crime_per_1k = sum(VALUE, na.rm = TRUE)) |>
-  ungroup() |>
-  distinct(LGD2014, .keep_all = TRUE) |>
+  summarise(
+    personal_crime_per_1k = sum(VALUE, na.rm = TRUE),
+    .by = c(`Ad-hoc year`, "LGD2014")
+  ) |>
   select(
     ltla24_code = LGD2014,
     personal_crime_per_1k,
