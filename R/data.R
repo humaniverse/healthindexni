@@ -32,6 +32,24 @@
 #'
 "lives_low_birth_weight"
 
+#' Average percentage of Children Overweight/Obese (2022/23)
+#'
+#' A dataset containing statistics on the average percentage of children
+#' clinically classed as overweight and obese in each Council, 2022/23.
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{overweight_obesity_percentage}{Average percentage of children clinically
+#' classed as overweight and obese in P1 and P6 (aged 4/5 and 10/11)}
+#' \item{year}{School Year}
+#'
+#' ...
+#' }
+#' @source \url{https://data.nisra.gov.uk/}
+#'
+"lives_childhood_overweight_obesity"
+
 #' Percentage of Pupil Absences (2021/22)
 #'
 #' A dataset containing statistics on the percentage of unauthorised school
