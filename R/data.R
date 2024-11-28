@@ -67,6 +67,24 @@
 #'
 "lives_teenage_pregnancy"
 
+#' Percentage of Young People in Education, Employment, and Training (2022/23)
+#'
+#' A dataset containing statistics on the percentage of young people (aged 16-18)
+#' who are in education, employment, and training.
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{young_peoples_eet_percentage}{Percentage of young people (aged 16-18 in
+#' Years 12-14) who are in education, employment, and training}
+#' \item{year}{School Year}
+#'
+#' ...
+#' }
+#' @source \url{https://data.nisra.gov.uk/}
+#'
+"lives_young_peoples_training"
+
 ##' Percentage of People Experiencing Unemployment (2023)
 #'
 #' A dataset containing statistics on the percentage of people experiencing
@@ -107,4 +125,3 @@
 #' @source \url{https://www.nisra.gov.uk/publications/census-2021-main-statistics-health-disability-and-unpaid-care-tables}
 #'
 "people_disability_daily_activities"
-
