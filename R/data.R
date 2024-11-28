@@ -1,3 +1,22 @@
+#' Percentage of Absolute Child Poverty (2017)
+#'
+#' A dataset containing statistics on the percentage of children (aged 15 and
+#' under) living in absolute low income families in each Council, 2017.
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{child_poverty_percentage}{Percentage of children 15 and under living in
+#' absolute low incomes families (where a household's income is below 60% of
+#' the median income in 2010/11, adjusted for inflation).}
+#' \item{year}{Year}
+#'
+#' ...
+#' }
+#' @source \url{https://data.nisra.gov.uk/}
+#'
+"lives_child_poverty"
+
 #' Percentage GSCE Attainment, including Maths and English (2022/23)
 #'
 #' A dataset containing statistics on the percentage of GSCE attainment,
@@ -32,6 +51,24 @@
 #'
 "lives_low_birth_weight"
 
+#' Average percentage of Children Overweight/Obese (2022/23)
+#'
+#' A dataset containing statistics on the average percentage of children
+#' clinically classed as overweight and obese in each Council, 2022/23.
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{overweight_obesity_percentage}{Average percentage of children clinically
+#' classed as overweight and obese in P1 and P6 (aged 4/5 and 10/11)}
+#' \item{year}{School Year}
+#'
+#' ...
+#' }
+#' @source \url{https://data.nisra.gov.uk/}
+#'
+"lives_childhood_overweight_obesity"
+
 #' Percentage of Pupil Absences (2021/22)
 #'
 #' A dataset containing statistics on the percentage of unauthorised school
@@ -53,7 +90,7 @@
 #' Rates of teenage pregnancies per 1,000 (2020-22)
 #'
 #' A dataset containing statistics on the rate of teenage pregnancies per 1k.
-#'
+
 #' @format A data frame with 11 rows and 3 variables:
 #' \describe{
 #' \item{ltla24_code}{Local Authority Code}
@@ -66,6 +103,81 @@
 #' @source \url{https://data.nisra.gov.uk/}
 #'
 "lives_teenage_pregnancy"
+
+#' Percentage of Young People in Education, Employment, and Training (2022/23)
+#'
+#' A dataset containing statistics on the percentage of young people (aged 16-18)
+#' who are in education, employment, and training.
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{young_peoples_eet_percentage}{Percentage of young people (aged 16-18 in
+#' Years 12-14) who are in education, employment, and training}
+#' \item{year}{School Year}
+#'
+#' ...
+#' }
+#' @source \url{https://data.nisra.gov.uk/}
+#'
+"lives_young_peoples_training"
+
+##' Percentage of People Experiencing Unemployment (2023)
+#'
+#' A dataset containing statistics on the percentage of people experiencing
+#' unemployment, claiming unemployed-related benefits.
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{unemployment_percentage}{Percentage of people experiencing unemployment
+#' and claiming unemployed-related benefits(Jobseeker’s Allowance plus
+#' out-of-work Universal Credit claimants who were claiming principally
+#' for the reason of being unemployed.)}
+#' \item{year}{Year}
+#'
+#' ...
+#' }
+#' @source \url{https://data.nisra.gov.uk/}
+#'
+"lives_unemployment"
+
+#' Mortality all causes rate per 100k (2020-22)
+#'
+#' A dataset containing statistics from an age-sex standardised rate for all
+#' causes of mortality per 100k, by Council (2020-22).
+#'
+#' To note: England's Health Index uses a single year to calculate mortality rates
+#' from all causes. Northern Ireland only has 3-year aggregate data available.
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{death_rate_per_100k}{age-sex standardised rate for all causes of
+#' mortality per 100k}
+#' \item{year}{3-year aggregated period}
+#'
+#' ...
+#' }
+#' @source \url{https://data.nisra.gov.uk/}
+#'
+"people_all_mortality"
+
+#' Average Measurement of Anxiety Out of 10 (2022-23)
+#'
+#' A dataset containing statistics of personal ratings on feelings of
+#' anxiety out of 10, by Council (2022-23).
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{anxiety_score_out_of_10}{Average personal ratings on feelings of
+#' anxiety out of 10 - 10 is most anxious, 1 is least anxious}
+#' \item{year}{Time period}
+#' ...
+#' }
+#' @source \url{https://www.ons.gov.uk/datasets/wellbeing-local-authority/editions/time-series/versions/4}
+"people_anxiety"
 
 #' Percentage of People Aged 15-64 with Long-Term Health Problem/Disability
 #' that Limits Daily Activities
@@ -87,6 +199,81 @@
 #' @source \url{https://www.nisra.gov.uk/publications/census-2021-main-statistics-health-disability-and-unpaid-care-tables}
 #'
 "people_disability_daily_activities"
+
+
+#' Rate of Self-Harm Related Admissions per 100,000 (2018/19-2022/23)
+#'
+#' A dataset containing statistics on the rate of self-harm related admissions
+#' per 100k, per Council (2018/19-2022/23).
+#'
+#' To note: England's Health Index collects rate of self-harm admissions per
+#' 100k in single-year increments. Only data available for Northern Ireland looks
+#' at 5-year aggregates across financial years.
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{self_harm_per_100k}{Rate of self-harm related admissions per 100k,
+#' standardised by age and sex with respect to the European Standard Population
+#' 2013}
+#' \item{year}{Grouped financial year aggregrate, 5 year period}
+#'
+#' ...
+#' }
+#' @source \url{https://data.nisra.gov.uk/}
+#'
+"people_self_harm"
+
+#' Average Measurement of Life Worthwhileness Out of 10 (2022-23)
+#'
+#' A dataset containing statistics of personal ratings on feelings of
+#' life worthwhileness out of 10, by Council (2022-23).
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{worthwhile_score_out_of_10}{Average personal ratings on feelings of
+#' life worthwhileness out of 10 - 10 is most worthwhile, 1 is least worthwhile}
+#' \item{year}{Time period}
+#' ...
+#' }
+#' @source \url{https://www.ons.gov.uk/datasets/wellbeing-local-authority/editions/time-series/versions/4}
+"people_life_worthwhileness"
+
+#' Average Measurement of Life Satisfaction Out of 10 (2022-23)
+#'
+#' A dataset containing statistics of personal ratings on feelings of
+#' life satisfaction out of 10, by Council (2022-23).
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{satisfaction_score_out_of_10}{Average personal ratings on feelings of
+#' life satisfaction out of 10 - 10 is most satisfied, 1 is least satisfied}
+#' \item{year}{Time period}
+#' ...
+#' }
+#' @source \url{https://www.ons.gov.uk/datasets/wellbeing-local-authority/editions/time-series/versions/4}
+"people_life_satisfaction"
+
+#' Adult Population Percentage with an Emotional, Psychological, or Mental Health
+#' Condition (2021)
+#'
+#' A dataset containing statistics on the percentage of adults (aged 15+) with
+#' an emotional, psychological, or mental health condition, by Council (2021).
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{mental_health_percentage}{Percentage of adult population (aged 15+)
+#' describing themselves as having an emotional, psychological, or mental health
+#' condition}
+#' \item{year}{Year}
+#'
+#' ...
+#' }
+#' @source \url{https://www.nisra.gov.uk/publications/census-2021-main-statistics-health-disability-and-unpaid-care-tables}
+"people_mental_health"
 
 #' Rates of Personal Crime per 1,000 (2017)
 #'
