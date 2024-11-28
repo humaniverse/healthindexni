@@ -1,26 +1,21 @@
+# ---- Load packages ----
 library(tidyverse)
-library(httr)
-library(readODS)
 
-GET(
-  "https://www.ninis2.nisra.gov.uk/Download/Making%20Life%20Better/Northern%20Ireland%20Multiple%20Deprivation%20Measure%202017%20-%20Indicators%20(administrative%20geographies).ods",
-  write_disk(tf <- tempfile(fileext = ".ods"))
-)
+# ---- Get and clean data ----
+# Child Poverty Data
+# Source: https://data.nisra.gov.uk/
 
-raw <-
-  read_ods(
-    tf,
-    sheet = "LGD2014",
-    range = "A4:AM15"
-  )
+url <- "https://ws-data.nisra.gov.uk/public/api.restful/PxStat.Data.Cube_API.ReadDataset/NIMDM17T10/CSV/1.0/"
+child_poverty_raw <- read_csv(url)
 
-child_poverty <-
-  raw |>
-  as_tibble() |>
+lives_child_poverty <- child_poverty_raw |>
+  filter(`Statistic Label` ==
+    "Proportion of the population aged 15 and under living in households whose equivalised income is below 60 per cent of the NI median") |>
   select(
-    lad_code = `LGD2014 Code`,
-    child_poverty_percent = `Proportion of the population aged 15 and under living in households whose equivalised income is below 60 per cent of the NI median\n(%)`
+    ltla24_code = LGD2014,
+    child_poverty_percentage = VALUE,
+    year = `Ad-hoc year`
   )
 
-# Save
-write_rds(child_poverty, "data/vulnerability/health-inequalities/northern-ireland/healthy-lives/child-poverty.rds")
+# ---- Save output to data/ folder ----
+usethis::use_data(lives_child_poverty, overwrite = TRUE)

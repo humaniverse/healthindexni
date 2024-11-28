@@ -1,25 +1,24 @@
+# ---- Load packages ----
 library(tidyverse)
-library(httr)
-library(readODS)
 
-GET(
-  "https://www.ninis2.nisra.gov.uk/Download/Health%20and%20Social%20Care/Standardised%20Admission%20Rate%20for%20Self%20Harm%20Admissions%20(administrative%20geographies).ods",
-  write_disk(tf <- tempfile(fileext = ".ods"))
-)
+# ---- Get data and clean ----
+# Self-Harm Emergency Admissions
+# Source: https://data.nisra.gov.uk/
 
-raw <-
-  read_ods(
-    tf,
-    sheet = "LGD2014",
-    range = "B4:E15"
-  )
+url <- "https://ws-data.nisra.gov.uk/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SARSELFHARMLGD/CSV/1.0/"
+self_harm_raw <- read_csv(url)
 
-self_harm <-
-  raw |>
-  as_tibble() |>
+people_self_harm <- self_harm_raw |>
+  filter(
+    SEX == "All",
+    `Grouped Financial Year` == "2018/19-2022/23"
+  ) |>
   select(
-    lad_code = `LGD2014 Code`,
-    self_harm_admissions_per_100000 = `Standardised Admission Rate`
-  )
+    ltla24_code = LGD2014,
+    self_harm_per_100k = VALUE,
+    year = `Grouped Financial Year`
+  ) |>
+  slice(-12)
 
-write_rds(self_harm, "data/vulnerability/health-inequalities/northern-ireland/healthy-people/self-harm.rds")
+# ---- Save output to data/ folder ----
+usethis::use_data(people_self_harm, overwrite = TRUE)
