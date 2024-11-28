@@ -13,7 +13,7 @@ people_all_mortality <- all_mortality_raw |>
     SEX == "All",
     `Grouped Year` == "2020-22"
   ) |>
-  slice(-12) |>
+  filter(LGD2014 != "N92000002") |>
   select(
     ltla24_code = LGD2014,
     death_rate_per_100k = VALUE,
