@@ -53,7 +53,7 @@
 #' Rates of teenage pregnancies per 1,000 (2020-22)
 #'
 #' A dataset containing statistics on the rate of teenage pregnancies per 1k.
-#'
+
 #' @format A data frame with 11 rows and 3 variables:
 #' \describe{
 #' \item{ltla24_code}{Local Authority Code}
@@ -84,6 +84,26 @@
 #' @source \url{https://data.nisra.gov.uk/}
 #'
 "lives_young_peoples_training"
+
+##' Percentage of People Experiencing Unemployment (2023)
+#'
+#' A dataset containing statistics on the percentage of people experiencing
+#' unemployment, claiming unemployed-related benefits.
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{unemployment_percentage}{Percentage of people experiencing unemployment
+#' and claiming unemployed-related benefits(Jobseeker’s Allowance plus
+#' out-of-work Universal Credit claimants who were claiming principally
+#' for the reason of being unemployed.)}
+#' \item{year}{Year}
+#'
+#' ...
+#' }
+#' @source \url{https://data.nisra.gov.uk/}
+#'
+"lives_unemployment"
 
 #' Percentage of People Aged 15-64 with Long-Term Health Problem/Disability
 #' that Limits Daily Activities
