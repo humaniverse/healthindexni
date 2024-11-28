@@ -19,16 +19,16 @@ lives_young_peoples_training <- young_peoples_raw |>
       "% of School Leavers with Destination: Training"
     )
   ) |>
-  group_by(LGD2014) |>
-  mutate(young_peoples_eet_percentage = sum(VALUE, na.rm = TRUE)) |>
-  distinct(LGD2014, .keep_all = TRUE) |>
+  summarise(
+    young_peoples_eet_percentage = sum(VALUE, na.rm = TRUE),
+    .by = c(`Academic Year`, "LGD2014")
+  ) |>
   select(
     ltla24_code = LGD2014,
     young_peoples_eet_percentage,
     year = `Academic Year`
   ) |>
-  ungroup() |>
-  slice(-12)
+  filter(ltla24_code != "N92000002")
 
 # ---- Save output to data/ folder ----
 usethis::use_data(lives_young_peoples_training, overwrite = TRUE)
