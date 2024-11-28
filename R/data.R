@@ -255,3 +255,22 @@
 #' }
 #' @source \url{https://www.ons.gov.uk/datasets/wellbeing-local-authority/editions/time-series/versions/4}
 "people_life_satisfaction"
+
+#' Adult Population Percentage with an Emotional, Psychological, or Mental Health
+#' Condition (2021)
+#'
+#' A dataset containing statistics on the percentage of adults (aged 15+) with
+#' an emotional, psychological, or mental health condition, by Council (2021).
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{mental_health_percentage}{Percentage of adult population (aged 15+)
+#' describing themselves as having an emotional, psychological, or mental health
+#' condition}
+#' \item{year}{Year}
+#'
+#' ...
+#' }
+#' @source \url{https://www.nisra.gov.uk/publications/census-2021-main-statistics-health-disability-and-unpaid-care-tables}
+"people_mental_health"
