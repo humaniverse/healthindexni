@@ -223,3 +223,19 @@
 #' @source \url{https://data.nisra.gov.uk/}
 #'
 "people_self_harm"
+
+#' Average Measurement of Life Worthwhileness Out of 10 (2022-23)
+#'
+#' A dataset containing statistics of personal ratings on feelings of
+#' life worthwhileness out of 10, by Council (2022-23).
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{worthwhile_score_out_of_10}{Average personal ratings on feelings of
+#' life worthwhileness out of 10 - 10 is most worthwhile, 1 is least worthwhile}
+#' \item{year}{Time period}
+#' ...
+#' }
+#' @source \url{https://www.ons.gov.uk/datasets/wellbeing-local-authority/editions/time-series/versions/4}
+"people_life_worthwhileness"
