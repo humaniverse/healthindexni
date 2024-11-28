@@ -18,16 +18,16 @@ lives_childhood_overweight_obesity <- childhood_overweight_obesity_raw |>
         "Proportion of Y8 children who are overweight or obese"
       )
   ) |>
-  group_by(LGD2014) |>
-  mutate(overweight_obesity_percentage = mean(VALUE, na.rm = TRUE)) |>
-  distinct(LGD2014, .keep_all = TRUE) |>
-  ungroup() |>
+  summarise(
+    overweight_obesity_percentage = mean(VALUE, na.rm = TRUE),
+    .by = c(`Academic Year`, "LGD2014")
+  ) |>
   select(
     ltla24_code = LGD2014,
     overweight_obesity_percentage,
     year = `Academic Year`
   ) |>
-  slice(-12)
+  filter(ltla24_code != "N92000002")
 
 # ---- Save output to data/ folder ----
 usethis::use_data(lives_childhood_overweight_obesity, overwrite = TRUE)
