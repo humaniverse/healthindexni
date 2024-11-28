@@ -1,26 +1,24 @@
+# ---- Load packages ----
 library(tidyverse)
-library(httr)
-library(readODS)
+library(geographr)
 
-GET(
-  "https://www.ninis2.nisra.gov.uk/Download/Labour%20Market/Claimant%20Count%20Annual%20Averages%20-%20Experimental%20(administrative%20geographies).ods",
-  write_disk(tf <- tempfile(fileext = ".ods"))
-)
+# ---- Get and clean data ----
+# Unemployment data
+# Source: https://data.nisra.gov.uk/
+url <- "https://ws-data.nisra.gov.uk/public/api.restful/PxStat.Data.Cube_API.ReadDataset/CCAALGD/CSV/1.0/"
+unemployment_raw <- read_csv(url)
 
-raw <-
-  read_ods(
-    tf,
-    sheet = "LGD2014",
-    range = "B4:D15"
-  )
-
-unemployment <-
-  raw |>
-  as_tibble() |>
+lives_unemployment <- unemployment_raw |>
+  filter(
+    UNIT == "%",
+    Year == "2023"
+  ) |>
   select(
-    lad_code = `LGD2014 Code`,
-    unemployment_rate = `Claimant Count Annual Averages (%)`
-  )
+    ltla24_code = LGD2014,
+    unemployment_percentage = VALUE,
+    year = Year
+  ) |>
+  slice(-1)
 
-# Save
-write_rds(unemployment, "data/vulnerability/health-inequalities/northern-ireland/healthy-lives/unemployment.rds")
+# ---- Save output to data/ folder ----
+usethis::use_data(lives_unemployment, overwrite = TRUE)
