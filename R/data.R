@@ -200,29 +200,21 @@
 #'
 "people_disability_daily_activities"
 
-
-#' Rate of Self-Harm Related Admissions per 100,000 (2018/19-2022/23)
+#' Average Measurement of Happiness Out of 10 (2022-23)
 #'
-#' A dataset containing statistics on the rate of self-harm related admissions
-#' per 100k, per Council (2018/19-2022/23).
-#'
-#' To note: England's Health Index collects rate of self-harm admissions per
-#' 100k in single-year increments. Only data available for Northern Ireland looks
-#' at 5-year aggregates across financial years.
+#' A dataset containing statistics of personal ratings on feelings of
+#' happiness out of 10, by Council (2022-23).
 #'
 #' @format A data frame with 11 rows and 3 variables:
 #' \describe{
 #' \item{ltla24_code}{Local Authority Code}
-#' \item{self_harm_per_100k}{Rate of self-harm related admissions per 100k,
-#' standardised by age and sex with respect to the European Standard Population
-#' 2013}
-#' \item{year}{Grouped financial year aggregrate, 5 year period}
-#'
+#' \item{happiness_score_out_of_10}{Average personal ratings on feelings of
+#' happiness out of 10 - 10 is most happy, 1 is least happy}
+#' \item{year}{Time period}
 #' ...
 #' }
-#' @source \url{https://data.nisra.gov.uk/}
-#'
-"people_self_harm"
+#' @source \url{https://www.ons.gov.uk/datasets/wellbeing-local-authority/editions/time-series/versions/4}
+"people_happiness"
 
 #' Average Measurement of Life Worthwhileness Out of 10 (2022-23)
 #'
@@ -292,3 +284,26 @@
 #' @source \url{https://data.nisra.gov.uk/}
 #'
 "places_personal_crime"
+
+#' Rate of Self-Harm Related Admissions per 100,000 (2018/19-2022/23)
+#'
+#' A dataset containing statistics on the rate of self-harm related admissions
+#' per 100k, per Council (2018/19-2022/23).
+#'
+#' To note: England's Health Index collects rate of self-harm admissions per
+#' 100k in single-year increments. Only data available for Northern Ireland looks
+#' at 5-year aggregates across financial years.
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{self_harm_per_100k}{Rate of self-harm related admissions per 100k,
+#' standardised by age and sex with respect to the European Standard Population
+#' 2013}
+#' \item{year}{Grouped financial year aggregrate, 5 year period}
+#'
+#' ...
+#' }
+#' @source \url{https://data.nisra.gov.uk/}
+#'
+"people_self_harm"
