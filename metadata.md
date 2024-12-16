@@ -68,6 +68,6 @@
 | Healthy Places | Neighbourhood noise | 2017 | [NISRA](https://www.ninis2.nisra.gov.uk) | [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :heavy_check_mark: | :heavy_check_mark: |
 | Healthy Places | Road Safety | :x: | :x: | :x: | :x: - data unavailable | :x: |
 | Healthy Places | Road Traffic Volume | :x: | :x: | :x: | :x: TO DO | :x: |
-| Healthy Places | Internet access | :x: | :x: | :x: | :x: TO DO | :x: |
+| Healthy Places | Internet access | 2021/22 | [NISRA](https://data.nisra.gov.uk/) | [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :heavy_check_mark: Indicator: Percentage of households without access to the internet at home. | :heavy_check_mark:|
 | Healthy Places | Transport noise: Daytime | 2017 | [NISRA](https://www.ninis2.nisra.gov.uk) | [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :heavy_check_mark: - Separate data was not available for day & night, so just one metric has been used | :heavy_check_mark: |
 | Healthy Places | Transport noise: Nighttime | 2017 | [NISRA](https://www.ninis2.nisra.gov.uk) | [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :heavy_check_mark: - Separate data was not available for day & night, so just one metric has been used | :heavy_check_mark: |
