@@ -4,34 +4,52 @@ library(readxl)
 library(geographr)
 
 # ---- Get and clean data ----
-# Healthy Life Expectancy
+# Life Expectancy (2020-2022)
 # Source: https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/healthandlifeexpectancies/datasets/lifeexpectancyforlocalareasinenglandnorthernirelandandwalesbetween2001to2003and2020to2022
 
 url <- "https://www.ons.gov.uk/file?uri=/peoplepopulationandcommunity/healthandsocialcare/healthandlifeexpectancies/datasets/lifeexpectancyforlocalareasinenglandnorthernirelandandwalesbetween2001to2003and2020to2022/between2001to2003and2020to2022/lifeexpectancylocalareas.xlsx"
 temp_file <- tempfile(fileext = ".xlsx")
 download.file(url, temp_file, mode = "wb")
 
-hle_raw <- read_excel(temp_file, sheet = 5, skip = 11)
+le_raw <- read_excel(temp_file, sheet = 5, skip = 11)
 
 
-# Healthy Life Expectancy (Male)
+# Life Expectancy (Male)
 
-male_hle <- hle_raw |>
+male_le <- le_raw |>
   filter(Sex == "Male",
-         str_starts(`Area code`, "N")) |>
-  select(ltla24_code = `Area code`)
+         str_starts(`Area code`, "N"),
+         `Age group` == "<1",
+         `Area code` != "N92000002") |>
+  select(ltla24_code = `Area code`,
+         life_expectancy_male = `Life expectancy (years)...62`)
 
+# Life Expectancy (Female)
 
-
-
-
-
-
-# Healthy Life Expectancy (Female)
-
-female_hle <- hle_raw |>
+female_le <- le_raw |>
   filter(Sex == "Female",
-         str_starts(`Area code`, "N"))
+         str_starts(`Area code`, "N"),
+         `Age group` == "<1",
+         `Area code` != "N92000002") |>
+  select(ltla24_code = `Area code`,
+         life_expectancy_female = `Life expectancy (years)...62`)
+
+
+# Join datasets
+people_life_expectancy <- male_le |>
+  left_join(female_le, by = "ltla24_code")
+
+
+
+# TO DO: add in population data (from NISRA: 'Population totals, MYE01T06' OR
+# 'Mid-year population estimates, MYE01T04 - probably this one).
+#
+# Then need to get population totals for males and females. Then combine male
+# and female population to get total population for each council.
+#
+# Then need to calculate the weighted life expectancy -
+# ((male-LE * male-pop) + (female-LE * female-pop)) / total-pop
+
 
 
 # ---- Load libraries ----
