@@ -63,7 +63,7 @@
 | Healthy Places | Distance to Pharmacies | :x: | :x: | :x: | :x: - data unavailable | :x: |
 | Healthy Places | Distance to Sports or Leisure Facilities | :x: | :x: | :x: | :x: - data unavailable | :x: |
 | Healthy Places | Personal Crime | 2017 | [NISRA](https://data.nisra.gov.uk/) | [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :heavy_check_mark: Indicator: Personal crime per 1,000 people. | :heavy_check_mark: |
-| Healthy Places | Low-Level Crime | :X: | :x: | :x: | :x: TO DO. | :x: |
+| Healthy Places | Low-Level Crime | :x: | :x: | :x: | :x: Data unavailable. | :x: |
 | Healthy Places | Air Pollution | 2019 | [DEFRA](https://uk-air.defra.gov.uk/data/pcm-data) | [OGL3](https://www.gov.scot/crown-copyright/) | :heavy_check_mark: | :heavy_check_mark: |
 | Healthy Places | Neighbourhood noise | 2017 | [NISRA](https://www.ninis2.nisra.gov.uk) | [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :heavy_check_mark: | :heavy_check_mark: |
 | Healthy Places | Road Safety | :x: | :x: | :x: | :x: - data unavailable | :x: |
