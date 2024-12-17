@@ -285,6 +285,22 @@
 #'
 "places_personal_crime"
 
+#' Road safety (2023)
+#'
+#' A dataset containing number of people killed or seriously injured in each
+#' Northern Irish Council Area in 2023 (latest available data).
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{road_accident_count}{Number of people killed or seriously injured, per Local Authority}
+#' \item{year}{Year}
+#'
+#' ...
+#' }
+#' @source \url{https://www.psni.police.uk/about-us/our-publications-and-reports/official-statistics/road-traffic-collision-statistics}
+"places_road_safety"
+
 #' Rate of Self-Harm Related Admissions per 100,000 (2018/19-2022/23)
 #'
 #' A dataset containing statistics on the rate of self-harm related admissions
