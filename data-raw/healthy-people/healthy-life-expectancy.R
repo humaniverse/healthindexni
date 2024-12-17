@@ -1,3 +1,39 @@
+# ---- Load packages ----
+library(tidyverse)
+library(readxl)
+library(geographr)
+
+# ---- Get and clean data ----
+# Healthy Life Expectancy
+# Source: https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/healthandlifeexpectancies/datasets/lifeexpectancyforlocalareasinenglandnorthernirelandandwalesbetween2001to2003and2020to2022
+
+url <- "https://www.ons.gov.uk/file?uri=/peoplepopulationandcommunity/healthandsocialcare/healthandlifeexpectancies/datasets/lifeexpectancyforlocalareasinenglandnorthernirelandandwalesbetween2001to2003and2020to2022/between2001to2003and2020to2022/lifeexpectancylocalareas.xlsx"
+temp_file <- tempfile(fileext = ".xlsx")
+download.file(url, temp_file, mode = "wb")
+
+hle_raw <- read_excel(temp_file, sheet = 5, skip = 11)
+
+
+# Healthy Life Expectancy (Male)
+
+male_hle <- hle_raw |>
+  filter(Sex == "Male",
+         str_starts(`Area code`, "N")) |>
+  select(ltla24_code = `Area code`)
+
+
+
+
+
+
+
+# Healthy Life Expectancy (Female)
+
+female_hle <- hle_raw |>
+  filter(Sex == "Female",
+         str_starts(`Area code`, "N"))
+
+
 # ---- Load libraries ----
 library(tidyverse)
 library(httr)
