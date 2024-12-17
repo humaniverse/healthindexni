@@ -70,5 +70,5 @@
 | Healthy Places | Road Safety | :x: | :x: | :x: | :x: - data unavailable | :x: |
 | Healthy Places | Road Traffic Volume | :x: | :x: | :x: | :x: TO DO | :x: |
 | Healthy Places | Internet access | :x: | :x: | :x: | :x: TO DO | :x: |
-| Healthy Places | Transport noise: Daytime | 2017 | [NISRA](https://www.ninis2.nisra.gov.uk) | [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :heavy_check_mark: - Separate data was not available for day & night, so just one metric has been used | :heavy_check_mark: |
-| Healthy Places | Transport noise: Nighttime | 2017 | [NISRA](https://www.ninis2.nisra.gov.uk) | [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :heavy_check_mark: - Separate data was not available for day & night, so just one metric has been used | :heavy_check_mark: |
+| Healthy Places | Transport noise: Daytime | 2017 | [NISRA](https://www.ninis2.nisra.gov.uk) | [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :x:  Indicator not overtly present in England's Health Index. To review at the end. | :x: |
+| Healthy Places | Transport noise: Nighttime | 2017 | [NISRA](https://www.ninis2.nisra.gov.uk) | [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :x:  Indicator not overtly present in England's Health Index. To review at the end. | :x: |
