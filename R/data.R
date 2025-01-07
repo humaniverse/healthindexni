@@ -179,6 +179,22 @@
 #' @source \url{https://www.ons.gov.uk/datasets/wellbeing-local-authority/editions/time-series/versions/4}
 "people_anxiety"
 
+#' Cancer Registrations Percentage (2023-2024)
+#'
+#' A dataset containing statistics on cancer registration percentages, per
+#' Council (2023-2024).
+#'
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{cancer_percentage}{Percentage of people with cancer per Council}
+#' \item{year}{Time period - Financial year}
+#' ...
+#' }
+#' @source \url{https://data.nisra.gov.uk/}
+"people_cancer"
+
 #' Percentage of People Aged 15-64 with Long-Term Health Problem/Disability
 #' that Limits Daily Activities
 #'
