@@ -267,6 +267,25 @@
 #' @source \url{https://www.nisra.gov.uk/publications/census-2021-main-statistics-health-disability-and-unpaid-care-tables}
 "people_mental_health"
 
+#' Percentage Household Overcrowding (2017)
+#'
+#' A dataset containing statistics on the percentage of households experiencing
+#' household overcrowding, per Council (2017).
+#' Household overcrowding is typically defined as households with an occupancy
+#' rating of -1 or lower.
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{household_overcrowding_percentage}{Percentage of households
+#' experiencing household overcrowding}
+#' \item{year}{Year}
+#'
+#' ...
+#' }
+#' @source \url{https://data.nisra.gov.uk/}
+"places_household_overcrowding"
+
 #' Rates of Personal Crime per 1,000 (2017)
 #'
 #' A dataset containing statistics on 'personal crime' per 1,000 people in
