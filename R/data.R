@@ -35,6 +35,24 @@
 #'
 "lives_gsce_attainment"
 
+#' Percentage of Adults Diagnosed with High Blood Pressure (2023-2024)
+#'
+#' A dataset containing statistics on percentage of adults diagnosed with high
+#' blood pressure, by Council (2023-2024).
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{high_blood_pressure_percentage}{Percentage of adults diagnosed with
+#' high blood pressure}
+#' \item{year}{Time period - Financial year}
+#'
+#' ...
+#' }
+#' @source \url{https://data.nisra.gov.uk/}
+"lives_high_blood_pressure"
+
+
 #' Percentage of Babies Born Not at a Healthy Birth Weight (2022-2023)
 #'
 #' A dataset containing percentage babies born not at a healthy birth weight.
