@@ -26,8 +26,10 @@ smoking_raw <- read_excel(tf, sheet = 19, skip = 166)
 
 smoking_hb <- smoking_raw |>
   slice(2:6) |>
-  select(trust18_name = `All`,
-         smoking_percentage = `2022/23...14`)
+  select(
+    trust18_name = `All`,
+    smoking_percentage = `2022/23...14`
+  )
 
 # Join datasets
 # Smoking data + Trust name and code
@@ -38,4 +40,15 @@ smoking_hb <- smoking_hb |>
   relocate(trust18_code)
 
 # Smoking data + LA code
+lives_smoking <- smoking_hb |>
+  left_join(hb_ltla_lookup) |>
+  mutate(year = "2022/23") |>
+  select(
+    ltla24_code = ltla21_code,
+    smoking_percentage,
+    year
+  ) |>
+  arrange(ltla24_code)
 
+# ---- Save output to data/ folder ----
+usethis::use_data(lives_smoking, overwrite = TRUE)
