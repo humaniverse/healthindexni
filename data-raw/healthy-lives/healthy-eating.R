@@ -3,21 +3,24 @@ library(tidyverse)
 library(readxl)
 library(httr)
 library(geographr)
-library(ggplot2)
 
 # ---- Get and clean data ----
 # Healthy Eating Data
 # Source: https://www.health-ni.gov.uk/publications/health-survey-northern-ireland-first-results-202223
 
-GET("https://www.health-ni.gov.uk/sites/default/files/publications/health/hsni-trend-tables-22-23.xlsx",
-    write_disk(tf <- tempfile(fileext = ".xlsx")))
+GET(
+  "https://www.health-ni.gov.uk/sites/default/files/publications/health/hsni-trend-tables-22-23.xlsx",
+  write_disk(tf <- tempfile(fileext = ".xlsx"))
+)
 
 healthy_eating_raw <- read_excel(tf, sheet = 17, skip = 160)
 
 healthy_eating_hb <- healthy_eating_raw |>
   slice(2:6) |>
-  select(hb24_name = `All`,
-         healthy_eating_percentage = `2022/23...14`)
+  select(
+    hb24_name = `All`,
+    healthy_eating_percentage = `2022/23...14`
+  )
 
 
 # Geographical Code Data: Health Board and Local Authority
@@ -33,8 +36,10 @@ hb_lookup <- boundaries_trusts_ni18 |>
 # Healthy eating data + Trust name and code
 
 healthy_eating_hb <- healthy_eating_hb |>
-  select(trust18_name = hb24_name,
-         healthy_eating_percentage) |>
+  select(
+    trust18_name = hb24_name,
+    healthy_eating_percentage
+  ) |>
   left_join(hb_lookup, by = "trust18_name") |>
   select(-trust18_name) |>
   relocate(trust18_code)
@@ -42,7 +47,14 @@ healthy_eating_hb <- healthy_eating_hb |>
 # Healthy eating data + LA code
 
 lives_healthy_eating <- healthy_eating_hb |>
-  left_join(hb_ltla_lookup, by =
+  left_join(hb_ltla_lookup, by = "trust18_code") |>
+  mutate(year = "2022/23") |>
+  select(
+    ltla24_code = ltla21_code,
+    healthy_eating_percentage,
+    year
+  ) |>
+  arrange(ltla24_code)
 
-
-
+# ---- Save output to data/ folder ----
+usethis::use_data(lives_healthy_eating, overwrite = TRUE)
