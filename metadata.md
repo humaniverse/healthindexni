@@ -3,7 +3,7 @@
 | Domain | Indicator | Year | Source | License | Indicator Code Added to `R/` | Data Added to `data/` |
 | --- | --- | --- | --- | --- | --- | --- |
 | Healthy Lives | Alcohol Misuse | 2019 | [Census of drug and alcohol treatment services in Northern Ireland](https://www.health-ni.gov.uk/publications/census-drug-and-alcohol-treatment-services-northern-ireland-30th-april-2019) | :x: | :heavy_exclamation_mark: - The data is at the Health and Social Care Trusts level and is an absolute number. Will need to calculate compared to whoe population for a per 100k number. | :x: |
-| Healthy Lives | Drug Misuse | 2019 | [Census of drug and alcohol treatment services in Northern Ireland](https://www.health-ni.gov.uk/publications/census-drug-and-alcohol-treatment-services-northern-ireland-30th-april-2019) | :x: | :heavy_exclamation_mark:  - The data is at the Health and Social Care Trusts level and is an absolute number. Will need to calculate compared to whoe population for a per 100k number. | :x: |
+| Healthy Lives | Drug Misuse | :x: | :x: | :x: | :x:  Data unavailable. | :x: |
 | Healthy Lives | Healthy Eating | 2022-23 | [Health Survey Northern Ireland](https://www.health-ni.gov.uk/publications/health-survey-northern-ireland-first-results-202223) | :x: | :heavy_exclamation_mark: - The data is at the Health and Social Care Trusts level | :x: |
 | Healthy Lives | Physical Activity | :x: | :x: | :x:| :x: Data not collected.  | :x: |
 | Healthy Lives | Sedentary Behaviour | :x: | :x: | :x:| :x: - Data unavailable  | :x: |
