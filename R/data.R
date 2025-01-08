@@ -104,6 +104,25 @@
 #'
 "lives_teenage_pregnancy"
 
+#' Percentage of Childhood Vaccine Coverage (2022-2023)
+#'
+#' A dataset containing statistics on childhood vaccine coverage (aged 6 and
+#' under) in each Northern Irish Council, 2022/23.
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{child_vaccine_coverage_percentage}{Percentage of vaccine coverage. Includes
+#' childhood immunisation statistics (DtaP/IPV/Hib(HepB), MenB, Rotavirus, PCV,
+#' Hib/MenC, MMR1 (by age 2), MMR1 (by age 5), MMR2 (by age 5). Pre-School Booster)}
+#' \item{year}{School Year}
+#'
+#' ...
+#' }
+#' @source \url{https://www.publichealth.hscni.net/publications/director-public-health-core-tables-2022}
+#'
+"lives_child_vaccine_coverage"
+
 #' Percentage of Young People in Education, Employment, and Training (2022/23)
 #'
 #' A dataset containing statistics on the percentage of young people (aged 16-18)

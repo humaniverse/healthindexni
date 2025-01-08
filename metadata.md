@@ -18,7 +18,7 @@
 | Healthy Lives | Overweight and Obesity in Adults | :x: | :x: | :x: | :x: - Data unavailable. | :x: |
 | Healthy Lives | Cancer Screening | 2022/23 | [Public Health](https://www.publichealth.hscni.net/publications/director-public-health-core-tables-2022) | :x:| ❗: - The data (breast, bowel, and cervical cancers) is at the Health and Social Care Trusts level | :x: |
 | Healthy Lives | Sexual Health | :x: | :x: | :x: | :x: - Data unavailable. | :x: |
-| Healthy Lives | Vaccination Coverage | 2022/23 | [Public Health](https://www.publichealth.hscni.net/publications/director-public-health-core-tables-2022) | :x: | ❗: - The data is at the Health and Social Care Trusts level | :x: |
+| Healthy Lives | Vaccination Coverage | 2022/23 | [Public Health](https://www.publichealth.hscni.net/publications/director-public-health-core-tables-2022) | [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :heavy_check_mark: Indicator: Percentage of vaccine coverage in children 6 and under | :heavy_check_mark: |
 | Healthy Lives | Children in State Care | :x: | :x: | :x: | ❗: - Indicator not overtly present in England's HI. To review at the end (and likely remove) | :x: |
 | Healthy Lives | Infant Mortality | 2018-2022 | [NISRA](https://data.nisra.gov.uk/) | [OGL3](https://www.nisra.gov.uk/crown-copyright) | :heavy_exclamation_mark: Data only present at HSC level| :x: |
 | Healthy Lives | Low Birth Weight | 2022-23 | [Public Health Agency](https://www.publichealth.hscni.net/publications/statistical-profile-childrens-health-northern-ireland-202223) | [OGL3](https://www.nisra.gov.uk/crown-copyright) | :heavy_check_mark: Indicator: Percentage of infants born with low birth weight (<2,500g) | :heavy_check_mark: |
