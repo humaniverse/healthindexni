@@ -87,6 +87,23 @@
 #'
 "lives_pupil_absence"
 
+#' Percentage of Current Smokers (2022-2023)
+#'
+#' A dataset containing statistics on smoking status in
+#' each Northern Irish Council, 2022-23.
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{smoking_percentage}{Percentage of people that are current smokers}
+#' \item{year}{Time period}
+#'
+#' ...
+#' }
+#' @source \url{https://www.health-ni.gov.uk/publications/health-survey-northern-ireland-first-results-202223}
+#'
+"lives_smoking"
+
 #' Rates of teenage pregnancies per 1,000 (2020-22)
 #'
 #' A dataset containing statistics on the rate of teenage pregnancies per 1k.
