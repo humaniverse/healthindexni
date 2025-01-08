@@ -1,3 +1,22 @@
+#' Percentage of Cancer Screening Uptake (2022-2023)
+#'
+#' A dataset containing statistics on the percentage of cancer screening uptake
+#' in each Northern Irish Council, 2022-2023.
+#'
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{cancer_screening_uptake}{Percentage of cancer screening uptake; breast,
+#' bowel, and cervical cancer.}
+#' \item{year}{Time period}
+#'
+#' ...
+#' }
+#' @source \url{https://www.publichealth.hscni.net/publications/director-public-health-core-tables-2022}
+#'
+"lives_cancer_screening"
+
 #' Percentage of Absolute Child Poverty (2017)
 #'
 #' A dataset containing statistics on the percentage of children (aged 15 and
