@@ -65,7 +65,7 @@
 | Healthy Places | Personal Crime | 2017 | [NISRA](https://data.nisra.gov.uk/) | [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :heavy_check_mark: Indicator: Personal crime per 1,000 people. | :heavy_check_mark: |
 | Healthy Places | Low-Level Crime | :x: | :x: | :x: | :x: Data unavailable. | :x: |
 | Healthy Places | Air Pollution | 2019 | [DEFRA](https://uk-air.defra.gov.uk/data/pcm-data) | [OGL3](https://www.gov.scot/crown-copyright/) | :heavy_check_mark: | :heavy_check_mark: |
-| Healthy Places | Noise Complaints | 2024 | [DAERA](https://www.daera-ni.gov.uk/sites/default/files/publications/daera/Noise%20Complaint%20Statistics%20for%20NI%202023-24.PDF) | [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :heavy_exclamation_mark: Raw data currently unavailable (only in a report). Need to contact aeqteam@daera-ni.gov.uk and ask for raw data in Figure 1 of report | :heavy_exclamation_mark: |
+| Healthy Places | Noise Complaints | 2024 | [DAERA](https://www.daera-ni.gov.uk/sites/default/files/publications/daera/Noise%20Complaint%20Statistics%20for%20NI%202023-24.PDF) | [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :heavy_exclamation_mark: Raw data currently unavailable (only in a report). UPDATE: Now contacted  aeqteam@daera-ni.gov.uk and asked for raw data in Figure 1 of report | :heavy_exclamation_mark: |
 | Healthy Places | Road Safety | :x: | :x: | :x: | :x: - data unavailable | :x: |
 | Healthy Places | Road Traffic Volume | :x: | :x: | :x: | :x: Indicator not overtly present in England's Health Index. To review at the end. | :x: |
 | Healthy Places | Internet access | :x: | :x: | :x: | :x: TO DO | :x: |
