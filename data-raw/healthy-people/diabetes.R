@@ -1,25 +1,25 @@
+# ---- Load packages ----
 library(tidyverse)
-library(httr)
-library(readODS)
 
-GET(
-  "https://www.ninis2.nisra.gov.uk/Download/Health%20and%20Social%20Care/Disease%20Prevalence%20(Quality%20Outcomes%20Framework)%20(administrative%20geographies).ods",
-  write_disk(tf <- tempfile(fileext = ".ods"))
-)
+# ---- Get and clean data ----
+# Diabetes Data
+# Source: https://data.nisra.gov.uk/
 
-raw <-
-  read_ods(
-    tf,
-    sheet = "LGD2014",
-    range = "B4:AL15"
-  )
+diabetes_raw <- read_csv("https://ws-data.nisra.gov.uk/public/api.restful/PxStat.Data.Cube_API.ReadDataset/DISPREVLGD/CSV/1.0/")
 
-diabetes <-
-  raw |>
-  as_tibble() |>
+people_diabetes <- diabetes_raw |>
+  filter(
+    `Financial Year` == "2023/24",
+    `Disease` == "Diabetes Mellitus",
+    `Statistic Label` == "Raw disease prevalence per 1,000 patients",
+    LGD2014 != "N92000002"
+  ) |>
+  mutate(diabetes_percentage = (VALUE / 10)) |>
   select(
-    lad_code = `LGD2014 Code`,
-    diabetes_per_1000_patients = `Diabetes Mellitus Register: Raw Prevalence per 1,000 patients aged 17+ years`
+    ltla24_code = LGD2014,
+    diabetes_percentage,
+    year = `Financial Year`
   )
 
-write_rds(diabetes, "data/vulnerability/health-inequalities/northern-ireland/healthy-people/diabetes.rds")
+# ---- Save output to data/ folder ----
+usethis::use_data(people_diabetes, overwrite = TRUE)
