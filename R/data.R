@@ -179,6 +179,23 @@
 #' @source \url{https://www.ons.gov.uk/datasets/wellbeing-local-authority/editions/time-series/versions/4}
 "people_anxiety"
 
+#' Rate of Avoidable Deaths per 100k (2018-2022)
+#'
+#' A dataset containing statistics on age-standardised death rates per 100k, by
+#' Northern Irish Council (2018-2022).
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{avoidable_deaths_per_100k}{Age-standardised avoidable mortality rates per
+#' 100k}
+#' \item{year}{5-year aggregate period}
+#'
+#' ...
+#' }
+#' @source \url{https://data.nisra.gov.uk/}
+"people_avoidable_deaths"
+
 #' Percentage of People Aged 15-64 with Long-Term Health Problem/Disability
 #' that Limits Daily Activities
 #'
