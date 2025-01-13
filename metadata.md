@@ -8,7 +8,7 @@
 | Healthy Lives | Physical Activity | :x: | :x: | :x:| :x: Data not collected.  | :x: |
 | Healthy Lives | Sedentary Behaviour | :x: | :x: | :x:| :x: - Data unavailable  | :x: |
 | Healthy Lives | Smoking | 2022-23 | [Health Survey Northern Ireland](https://www.health-ni.gov.uk/publications/health-survey-northern-ireland-first-results-202223) | :x: | :heavy_exclamation_mark: - The data is at the Health and Social Care Trusts level | :x: |
-| Healthy Lives | Early Years Development | NA | [NISRA](https://datavis.nisra.gov.uk/dissemination/NINIS-redirect.html) | [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :heavy_exclamation_mark: Data unavailable - UPDATED contacted statistics@education-ni.gov.uk  (9.1.25) | :x: |
+| Healthy Lives | Early Years Development | :x: | :x: | :x: Data unavailable. | :x: |
 | Healthy Lives | Pupil Absence | 2021/22 | [NISRA](https://data.nisra.gov.uk/) | [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :heavy_check_mark: Indicator: Percentage of unauthorised school absences| :heavy_check_mark: |
 | Healthy Lives | GCSE Achievement | 2022-23 | [NISRA](https://data.nisra.gov.uk/) | [NISRA](https://data.nisra.gov.uk/) | :heavy_check_mark: Indicator: Percentage of GSCE attainment, including Maths and English (Grades A-C) | :heavy_check_mark: |
 | Healthy Lives | Young People's Education, Employment and Training | 2018 | [NISRA](https://www.ninis2.nisra.gov.uk) | [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :heavy_check_mark: | :heavy_check_mark: |
