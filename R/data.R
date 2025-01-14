@@ -216,6 +216,22 @@
 #' @source \url{https://www.ons.gov.uk/datasets/wellbeing-local-authority/editions/time-series/versions/4}
 "people_happiness"
 
+#' Average  Life Expectancy for Men and Women (2020-2022)
+#'
+#' A dataset containing statistics on average life expectancy for men
+#' and women, by Northern Irish Council (2020-2022).
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{life_expectancy_combined}{Average life expectancy for men and women}
+#' \item{year}{Time period - three year aggregate}
+#'
+#' ...
+#' }
+#' @source \url{https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/healthandlifeexpectancies/datasets/lifeexpectancyforlocalareasinenglandnorthernirelandandwalesbetween2001to2003and2020to2022}
+"people_life_expectancy"
+
 #' Average Measurement of Life Worthwhileness Out of 10 (2022-23)
 #'
 #' A dataset containing statistics of personal ratings on feelings of
