@@ -8,8 +8,8 @@
 A data frame with 11 rows and 3 variables:
 \describe{
 \item{ltla24_code}{Local Authority Code}
-\item{suicide_rate_per_100k}{Deaths from suicide (16+).
-Age standardised rate per 100,000.}
+\item{suicide_rate_per_100k}{Deaths from suicide (16+). Age standardised
+rate per 100,000.}
 \item{year}{Time period - 3 year aggregate}
 
 ...

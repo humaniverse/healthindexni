@@ -30,7 +30,7 @@ suicides_hb <- suicides_raw |>
   pivot_longer(cols = `Belfast`:`Western`, names_to = "trust18_name", values_to = "suicide_rate_per_100k") |>
   mutate(suicide_rate_per_100k = as.numeric(suicide_rate_per_100k)) |>
   group_by(trust18_name) |>
-  mutate(aggregate_suicide_rate_per_100k = sum(suicide_rate_per_100k, na.rm = TRUE)) |>
+  mutate(aggregate_suicide_rate_per_100k = (sum(suicide_rate_per_100k, na.rm = TRUE)) / 3) |>
   ungroup() |>
   select(
     trust18_name,
