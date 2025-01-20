@@ -35,6 +35,43 @@
 #'
 "lives_gsce_attainment"
 
+#' Percentage of Adults Diagnosed with High Blood Pressure (2023-2024)
+#'
+#' A dataset containing statistics on percentage of adults diagnosed with high
+#' blood pressure, by Council (2023-2024).
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{high_blood_pressure_percentage}{Percentage of adults diagnosed with
+#' high blood pressure}
+#' \item{year}{Time period - Financial year}
+#'
+#' ...
+#' }
+#' @source \url{https://data.nisra.gov.uk/}
+"lives_high_blood_pressure"
+
+
+#' Percentage of People that Eat Healthy (2022-2023)
+#'
+#' A dataset containing statistics on fruit and vegetable consumption in
+#' each Northern Irish Council, 2022-23.
+#'
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{healthy_eating_percentage}{Percentage of people that consume
+#' 5 portions or more of fruit and vegetable per day}
+#' \item{year}{Time period}
+#'
+#' ...
+#' }
+#' @source \url{https://www.health-ni.gov.uk/publications/health-survey-northern-ireland-first-results-202223}
+#'
+"lives_healthy_eating"
+
 #' Percentage of Babies Born Not at a Healthy Birth Weight (2022-2023)
 #'
 #' A dataset containing percentage babies born not at a healthy birth weight.
@@ -69,6 +106,23 @@
 #'
 "lives_childhood_overweight_obesity"
 
+#' Rate of infant mortality (2018-2022)
+#'
+#' A dataset containing statistics on the rate of infant mortality in each
+#' Norther Irish Council, 2018-2022.
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{infant_mortality_per_1k}{Rate of infants per 1,000 that have died
+#' under the age of 1}
+#' \item{year}{Time period - five year aggregate}
+#'
+#' ...
+#' }
+#' @source \url{https://data.nisra.gov.uk/}
+"lives_infant_mortality"
+
 #' Percentage of Pupil Absences (2021/22)
 #'
 #' A dataset containing statistics on the percentage of unauthorised school
@@ -86,6 +140,23 @@
 #' @source \url{https://data.nisra.gov.uk/}
 #'
 "lives_pupil_absence"
+
+#' Percentage of Current Smokers (2022-2023)
+#'
+#' A dataset containing statistics on smoking status in
+#' each Northern Irish Council, 2022-23.
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{smoking_percentage}{Percentage of people that are current smokers}
+#' \item{year}{Time period}
+#'
+#' ...
+#' }
+#' @source \url{https://www.health-ni.gov.uk/publications/health-survey-northern-ireland-first-results-202223}
+#'
+"lives_smoking"
 
 #' Rates of teenage pregnancies per 1,000 (2020-22)
 #'
@@ -198,6 +269,59 @@
 #' @source \url{https://www.ons.gov.uk/datasets/wellbeing-local-authority/editions/time-series/versions/4}
 "people_anxiety"
 
+#' Cancer Registrations Percentage (2023-2024)
+#'
+#' A dataset containing statistics on cancer registration percentages, per
+#' Council (2023-2024).
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{cancer_percentage}{Percentage of people with cancer per Council}
+#' \item{year}{Time period - Financial year}
+#' ...
+#' }
+#' @source \url{https://data.nisra.gov.uk/}
+"people_cancer"
+
+' Percentage of People with Dementia
+#'
+#' A dataset containing statistics on the percentage of people medically
+#' diagnosed with dementia, by Council (2023-24).
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{dementia_percentage}{Percentage of people medically diagnosed with
+#' dementia, per Council}
+#' \item{year}{Time period - Financial year}
+#'
+#' ...
+#' }
+#' @source \url{https://data.nisra.gov.uk/}
+"people_dementia"
+
+#' Percentage Rate of Cardiovascular Conditions (CHD, Atrial Fibrillation,
+#' Heart Failure, Stroke & TIA) (2023/2024)
+#'
+#' A dataset containing statistics on the percentage of people who self-reported
+#' as having CHD, Atrial Fibrillation, Heart Failure, and/or Stroke & TIA in
+#' Northern Irish Council Areas.
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authroity Code}
+#' \item{cardiovascular_conditions_percentage}{Percentage of people who self-reported
+#' as having CHD, Atrial Fibrillation, Heart Failure, and/or Stroke & TIA}
+#' \item{year}{Time period - financial year}
+#'
+#' ...
+#' }
+#' @source \url{https://data.nisra.gov.uk/}
+#'
+"people_cardiovascular_conditions"
+
+
 #' Percentage of People Aged 15-64 with Long-Term Health Problem/Disability
 #' that Limits Daily Activities
 #'
@@ -286,6 +410,77 @@
 #' @source \url{https://www.nisra.gov.uk/publications/census-2021-main-statistics-health-disability-and-unpaid-care-tables}
 "people_mental_health"
 
+#' Percentage of Households without Internet Access (2021/22)
+#'
+#' A dataset containing statistics on the percentage of households without
+#' internet access in Northern Irish Council Areas.
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{no_internet_access_percentage}{Percentage of households without access
+#' to the internet}
+#' \item{year}{Financial Year}
+#'
+#' ...
+#' }
+#' @source \url{https://data.nisra.gov.uk/}
+#'
+"places_internet_access"
+
+#' Air pollution (2019)
+#'
+#' A dataset containing population-weighted annual mean PM2.5 data for 2019, by
+#' Northern Irish Council Area. Uses the anthropogenic component.
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{air_pollution_weighted}{Population-weighted annual mean PM2.5}
+#' \item{year}{Year}
+#'
+#' ...
+#' }
+#' @source \url{https://uk-air.defra.gov.uk/data/pcm-data}
+"places_air_pollution"
+
+#' Percentage Household Overcrowding (2017)
+#'
+#' A dataset containing statistics on the percentage of households experiencing
+#' household overcrowding, per Council (2017).
+#' Household overcrowding is typically defined as households with an occupancy
+#' rating of -1 or lower.
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{household_overcrowding_percentage}{Percentage of households
+#' experiencing household overcrowding}
+#' \item{year}{Year}
+#'
+#' ...
+#' }
+#' @source \url{https://data.nisra.gov.uk/}
+"places_household_overcrowding"
+
+#' Percentage Rate of Respiratory Conditions (Asthma and COPD) (2023/2024)
+#'
+#' A dataset containing statistics on the percentage of people who self-reported
+#' as having asthma and/or COPD in Northern Irish Council Areas.
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authroity Code}
+#' \item{respiratory_conditions_percentage}{Percentage of people who self-reported
+#' as having asthma and/or COPD}
+#' \item{year}{Time period - financial year}
+#'
+#' ...
+#' }
+#' @source \url{https://data.nisra.gov.uk/}
+#'
+"people_respiratory_conditions"
+
 #' Rates of Personal Crime per 1,000 (2017)
 #'
 #' A dataset containing statistics on 'personal crime' per 1,000 people in
@@ -303,6 +498,22 @@
 #' @source \url{https://data.nisra.gov.uk/}
 #'
 "places_personal_crime"
+
+#' Road safety (2023)
+#'
+#' A dataset containing number of people killed or seriously injured in each
+#' Northern Irish Council Area in 2023 (latest available data).
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{road_accident_count}{Number of people killed or seriously injured, per Local Authority}
+#' \item{year}{Year}
+#'
+#' ...
+#' }
+#' @source \url{https://www.psni.police.uk/about-us/our-publications-and-reports/official-statistics/road-traffic-collision-statistics}
+"places_road_safety"
 
 #' Rate of Self-Harm Related Admissions per 100,000 (2018/19-2022/23)
 #'
