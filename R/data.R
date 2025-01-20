@@ -380,6 +380,22 @@
 #' @source \url{https://data.nisra.gov.uk/}
 "people_avoidable_deaths"
 
+#' Percentage prevalence of diabetes (2023-2024)
+#'
+#' A dataset containing statistics on the percentage prevalence of people with
+#' diabetes, by Northern Irish Council (2023-2024).
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{diabetes_percentage}{Percentage prevalence of diabetes (all types)}
+#' \item{year}{Time period}
+#'
+#' ...
+#' }
+#' @source \url{https://data.nisra.gov.uk/}
+"people_diabetes"
+
 #' Percentage of People Aged 15-64 with Long-Term Health Problem/Disability
 #' that Limits Daily Activities
 #'
