@@ -106,6 +106,23 @@
 #'
 "lives_childhood_overweight_obesity"
 
+#' Rate of infant mortality (2018-2022)
+#'
+#' A dataset containing statistics on the rate of infant mortality in each
+#' Norther Irish Council, 2018-2022.
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{infant_mortality_per_1k}{Rate of infants per 1,000 that have died
+#' under the age of 1}
+#' \item{year}{Time period - five year aggregate}
+#'
+#' ...
+#' }
+#' @source \url{https://data.nisra.gov.uk/}
+"lives_infant_mortality"
+
 #' Percentage of Pupil Absences (2021/22)
 #'
 #' A dataset containing statistics on the percentage of unauthorised school
