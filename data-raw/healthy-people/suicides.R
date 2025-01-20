@@ -1,25 +1,54 @@
+# ---- Load packages ----
 library(tidyverse)
 library(httr)
-library(readODS)
+library(readxl)
+library(geographr)
+
+# ---- Get and clean data ----
+
+# Geographical Code Data: Health Board and Local Authority
+
+hb_ltla_lookup <- lookup_ltla21_hsct18 |>
+  distinct(ltla21_code, trust18_code)
+
+hb_lookup <- boundaries_trusts_ni18 |>
+  sf::st_drop_geometry()
+
+# Suicide Data
+# Source: https://www.nisra.gov.uk/publications/suicide-statistics-2022
 
 GET(
-  "https://www.ninis2.nisra.gov.uk/Download/Population/Deaths%20by%20Cause%20(administrative%20geographies).ods",
-  write_disk(tf <- tempfile(fileext = ".ods"))
+  "https://www.nisra.gov.uk/system/files/statistics/Suicide%20Statistics%202022%20Tables.xlsx",
+  write_disk(tf <- tempfile(fileext = ".xlsx"))
 )
 
-raw <-
-  read_ods(
-    tf,
-    sheet = "LGD2014",
-    range = "B4:M15"
-  )
+suicides_raw <- read_excel(tf, sheet = 16, skip = 5)
 
-suicide <-
-  raw |>
-  as_tibble() |>
+suicides_hb <- suicides_raw |>
+  filter(`Number and Rate` == "Age-Standardised rate") |>
+  slice(7:9) |>
+  pivot_longer(cols = `Belfast`:`Western`, names_to = "trust18_name", values_to = "suicide_rate_per_100k") |>
+  mutate(suicide_rate_per_100k = as.numeric(suicide_rate_per_100k)) |>
+  summarise(aggregate_suicide_rate_per_100k = mean(suicide_rate_per_100k), .by = trust18_name)
+
+# Join datasets
+# Suicide data + Trust name and code
+
+suicides_hb <- suicides_hb |>
+  left_join(hb_lookup) |>
+  select(-trust18_name) |>
+  relocate(trust18_code)
+
+# Suicide data + LA code
+people_suicide <- suicides_hb |>
+  left_join(hb_ltla_lookup) |>
+  mutate(year = "2019-2021") |>
   select(
-    lad_code = `LGD2014 Code`,
-    suicide_percentage_of_all_deaths = `Deaths from suicide and undetermined intent (%)`
-  )
+    ltla24_code = ltla21_code,
+    suicide_rate_per_100k = aggregate_suicide_rate_per_100k,
+    year
+  ) |>
+  arrange(ltla24_code)
 
-write_rds(suicide, "data/vulnerability/health-inequalities/northern-ireland/healthy-people/suicide.rds")
+# ---- Save output to data/ folder ----
+usethis::use_data(people_suicide, overwrite = TRUE)

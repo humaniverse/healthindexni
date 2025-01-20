@@ -578,3 +578,20 @@
 #' @source \url{https://data.nisra.gov.uk/}
 #'
 "people_self_harm"
+
+#' Deaths from Suicide (2019-2021)
+#'
+#' A dataset containing statistics from deaths by suicide, by Northern Irish
+#' Council.
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{suicide_rate_per_100k}{Deaths from suicide (16+). Age standardised
+#' rate per 100,000.}
+#' \item{year}{Time period - 3 year aggregate}
+#'
+#' ...
+#' }
+#' @source \url{https://www.nisra.gov.uk/publications/suicide-statistics-2022}
+"people_suicide"
