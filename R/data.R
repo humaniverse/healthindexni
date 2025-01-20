@@ -35,6 +35,24 @@
 #'
 "lives_gsce_attainment"
 
+#' Percentage of Adults Diagnosed with High Blood Pressure (2023-2024)
+#'
+#' A dataset containing statistics on percentage of adults diagnosed with high
+#' blood pressure, by Council (2023-2024).
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{high_blood_pressure_percentage}{Percentage of adults diagnosed with
+#' high blood pressure}
+#' \item{year}{Time period - Financial year}
+#'
+#' ...
+#' }
+#' @source \url{https://data.nisra.gov.uk/}
+"lives_high_blood_pressure"
+
+
 #' Percentage of Babies Born Not at a Healthy Birth Weight (2022-2023)
 #'
 #' A dataset containing percentage babies born not at a healthy birth weight.
@@ -267,6 +285,40 @@
 #' @source \url{https://www.nisra.gov.uk/publications/census-2021-main-statistics-health-disability-and-unpaid-care-tables}
 "people_mental_health"
 
+#' Percentage of Households without Internet Access (2021/22)
+#'
+#' A dataset containing statistics on the percentage of households without
+#' internet access in Northern Irish Council Areas.
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{no_internet_access_percentage}{Percentage of households without access
+#' to the internet}
+#' \item{year}{Financial Year}
+#'
+#' ...
+#' }
+#' @source \url{https://data.nisra.gov.uk/}
+#'
+"places_internet_access"
+
+#' Air pollution (2019)
+#'
+#' A dataset containing population-weighted annual mean PM2.5 data for 2019, by
+#' Northern Irish Council Area. Uses the anthropogenic component.
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{air_pollution_weighted}{Population-weighted annual mean PM2.5}
+#' \item{year}{Year}
+#'
+#' ...
+#' }
+#' @source \url{https://uk-air.defra.gov.uk/data/pcm-data}
+"places_air_pollution"
+
 #' Percentage Household Overcrowding (2017)
 #'
 #' A dataset containing statistics on the percentage of households experiencing
@@ -303,6 +355,22 @@
 #' @source \url{https://data.nisra.gov.uk/}
 #'
 "places_personal_crime"
+
+#' Road safety (2023)
+#'
+#' A dataset containing number of people killed or seriously injured in each
+#' Northern Irish Council Area in 2023 (latest available data).
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{road_accident_count}{Number of people killed or seriously injured, per Local Authority}
+#' \item{year}{Year}
+#'
+#' ...
+#' }
+#' @source \url{https://www.psni.police.uk/about-us/our-publications-and-reports/official-statistics/road-traffic-collision-statistics}
+"places_road_safety"
 
 #' Rate of Self-Harm Related Admissions per 100,000 (2018/19-2022/23)
 #'
