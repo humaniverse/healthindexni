@@ -355,6 +355,24 @@
 #' @source \url{https://data.nisra.gov.uk/}
 "places_household_overcrowding"
 
+#' Percentage Rate of Respiratory Conditions (Asthma and COPD) (2023/2024)
+#'
+#' A dataset containing statistics on the percentage of people who self-reported
+#' as having asthma and/or COPD in Northern Irish Council Areas.
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authroity Code}
+#' \item{respiratory_conditions_percentage}{Percentage of people who self-reported
+#' as having asthma and/or COPD}
+#' \item{year}{Time period - financial year}
+#'
+#' ...
+#' }
+#' @source \url{https://data.nisra.gov.uk/}
+#'
+"people_respiratory_conditions"
+
 #' Rates of Personal Crime per 1,000 (2017)
 #'
 #' A dataset containing statistics on 'personal crime' per 1,000 people in
