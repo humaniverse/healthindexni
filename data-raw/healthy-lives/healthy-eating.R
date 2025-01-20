@@ -54,7 +54,8 @@ lives_healthy_eating <- healthy_eating_hb |>
     healthy_eating_percentage,
     year
   ) |>
-  arrange(ltla24_code)
+  arrange(ltla24_code) |>
+  mutate(healthy_eating_percentage = as.numeric(healthy_eating_percentage))
 
 # ---- Save output to data/ folder ----
 usethis::use_data(lives_healthy_eating, overwrite = TRUE)
