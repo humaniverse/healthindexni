@@ -267,6 +267,24 @@
 #' @source \url{https://www.nisra.gov.uk/publications/census-2021-main-statistics-health-disability-and-unpaid-care-tables}
 "people_mental_health"
 
+#' Percentage of Households without Internet Access (2021/22)
+#'
+#' A dataset containing statistics on the percentage of households without
+#' internet access in Northern Irish Council Areas.
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{no_internet_access_percentage}{Percentage of households without access
+#' to the internet}
+#' \item{year}{Financial Year}
+#'
+#' ...
+#' }
+#' @source \url{https://data.nisra.gov.uk/}
+#'
+"places_internet_access"
+
 #' Air pollution (2019)
 #'
 #' A dataset containing population-weighted annual mean PM2.5 data for 2019, by
