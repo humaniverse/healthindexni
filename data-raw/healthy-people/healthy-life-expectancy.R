@@ -47,7 +47,7 @@ people_life_expectancy <- male_le |>
   left_join(female_le, by = "ltla24_code") |>
   rowwise() |>
   mutate(
-    life_expectancy_combined = (life_expectancy_male + life_expectancy_female) / 2,
+    life_expectancy_combined = mean(c(life_expectancy_male, life_expectancy_female)),
     year = "2020-2022"
   ) |>
   select(
