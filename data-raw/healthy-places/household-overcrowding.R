@@ -1,25 +1,20 @@
+# ---- Load packages ----
 library(tidyverse)
-library(httr)
-library(readODS)
 
-GET(
-  "https://www.ninis2.nisra.gov.uk/Download/Deprivation/Northern%20Ireland%20Multiple%20Deprivation%20Measure%202017%20-%20Indicators%20(administrative%20geographies).ods",
-  write_disk(tf <- tempfile(fileext = ".ods"))
-)
+# ---- Get and clean data ----
+# Household Overcrowding Data
+# Source: https://data.nisra.gov.uk/
 
-raw <-
-  read_ods(
-    tf,
-    sheet = "LGD2014",
-    range = "B4:AM15"
-  )
+url <- "https://ws-data.nisra.gov.uk/public/api.restful/PxStat.Data.Cube_API.ReadDataset/NIMDM17T10/CSV/1.0/"
+overcrowding_raw <- read_csv(url)
 
-overcrowding <-
-  raw |>
-  as_tibble() |>
+places_household_overcrowding <- overcrowding_raw |>
+  filter(`Statistic Label` == "Rate of Household overcrowding") |>
   select(
-    lad_code = `LGD2014 Code`,
-    overcrowding_rate = `Rate of Household overcrowding\n(%)`
+    ltla24_code = LGD2014,
+    household_overcrowding_percentage = VALUE,
+    year = `Ad-hoc year`
   )
 
-write_rds(overcrowding, "data/vulnerability/health-inequalities/northern-ireland/healthy-places/household-overcrowding.rds")
+# ---- Save output to data/ folder ----
+usethis::use_data(places_household_overcrowding, overwrite = TRUE)
