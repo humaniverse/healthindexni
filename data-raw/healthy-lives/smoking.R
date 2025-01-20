@@ -48,7 +48,8 @@ lives_smoking <- smoking_hb |>
     smoking_percentage,
     year
   ) |>
-  arrange(ltla24_code)
+  arrange(ltla24_code) |>
+  mutate(smoking_percentage = as.numeric(smoking_percentage))
 
 # ---- Save output to data/ folder ----
 usethis::use_data(lives_smoking, overwrite = TRUE)
