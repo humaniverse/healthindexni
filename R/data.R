@@ -197,6 +197,23 @@
 #' @source \url{https://www.ons.gov.uk/datasets/wellbeing-local-authority/editions/time-series/versions/4}
 "people_anxiety"
 
+#' Percentage of People with Dementia
+#'
+#' A dataset containing statistics on the percentage of people medically
+#' diagnosed with dementia, by Council (2023-24).
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{dementia_percentage}{Percentage of people medically diagnosed with
+#' dementia, per Council}
+#' \item{year}{Time period - Financial year}
+#'
+#' ...
+#' }
+#' @source \url{https://data.nisra.gov.uk/}
+"people_dementia"
+
 #' Percentage of People Aged 15-64 with Long-Term Health Problem/Disability
 #' that Limits Daily Activities
 #'
