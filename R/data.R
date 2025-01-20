@@ -285,6 +285,22 @@
 #'
 "places_internet_access"
 
+#' Air pollution (2019)
+#'
+#' A dataset containing population-weighted annual mean PM2.5 data for 2019, by
+#' Northern Irish Council Area. Uses the anthropogenic component.
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{air_pollution_weighted}{Population-weighted annual mean PM2.5}
+#' \item{year}{Year}
+#'
+#' ...
+#' }
+#' @source \url{https://uk-air.defra.gov.uk/data/pcm-data}
+"places_air_pollution"
+
 #' Rates of Personal Crime per 1,000 (2017)
 #'
 #' A dataset containing statistics on 'personal crime' per 1,000 people in
