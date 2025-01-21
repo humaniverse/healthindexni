@@ -64,7 +64,7 @@
 | Healthy Places | Personal Crime | 2017 | [NISRA](https://data.nisra.gov.uk/) | [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :heavy_check_mark: Indicator: Personal crime per 1,000 people. | :heavy_check_mark: |
 | Healthy Places | Low-Level Crime | :x: | :x: | :x: | :x: Data unavailable. | :x: |
 | Healthy Places | Air Pollution | 2019 | [DEFRA](https://uk-air.defra.gov.uk/data/pcm-data) | [OGL3](https://www.gov.scot/crown-copyright/) | :heavy_check_mark: Indicator: Air pollution, population weighted annual mean PM2.5 | :heavy_check_mark: |
-| Healthy Places | Neighbourhood noise | 2017 | [NISRA](https://www.ninis2.nisra.gov.uk) | [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :heavy_check_mark: | :heavy_check_mark: |
+| Healthy Places | Neighbourhood noise | :x: | :x: | :x: | :heavy_exclamation_mark: Indicator not overtly present in England's HI. To remove at end. | :x: |
 | Healthy Places | Noise Complaints | 2023-2024 | [DAERA](https://www.daera-ni.gov.uk/sites/default/files/publications/daera/Noise%20Complaint%20Statistics%20for%20NI%202023-24.PDF) | [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :heavy_check_mark: Rate of noise complaints per 1,000 people. | :heavy_check_mark: 
 | Healthy Places | Road Safety | 2023 | [PSNI](https://www.psni.police.uk/about-us/our-publications-and-reports/official-statistics/road-traffic-collision-statistics)| [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :heavy_check_mark: Number of people seriously injured or killed by Local Authority area. | :heavy_check_mark: |
 | Healthy Places | Road Traffic Volume | :x: | :x: | :x: | :x: TO DO | :x: |
