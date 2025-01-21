@@ -3,7 +3,8 @@
 \docType{data}
 \name{people_dementia}
 \alias{people_dementia}
-\title{Percentage of People with Dementia}
+\title{A dataset containing statistics on the percentage of people medically
+diagnosed with dementia, by Council (2023-24).}
 \format{
 A data frame with 11 rows and 3 variables:
 \describe{
