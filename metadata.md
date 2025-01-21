@@ -48,7 +48,7 @@
 | Healthy People | Cardiovascular Conditions: Peripheral Arterial Disease | :x: | :x: | :x: This indicator not overtly present in or acting as a substitute for a similar indicator in England's Health Index. To check at the end.| :x: - data unavailable | :x: |
 | Healthy People | Cardiovascular Conditions: Stroke and TIA | 2021 | [NISRA](https://www.ninis2.nisra.gov.uk) | [OGL3](https://www.nisra.gov.uk/crown-copyright) | :x: This indicator not overtly present in or acting as a substitute for a similar indicator in England's Health Index. To check at the end.| :x: |
 | Healthy People | Dementia | 2023-24 | [NISRA](https://data.nisra.gov.uk/) | [OGL3](https://www.nisra.gov.uk/crown-copyright) | :heavy_check_mark: Indicator: Percentage of people with dementia.| :heavy_check_mark: |
-| Healthy People | Diabetes | 2023-24 | [NISRA]https://data.nisra.gov.uk/) | [OGL3](https://www.nisra.gov.uk/crown-copyright) | :heavy_check_mark: Indicator: Percentage prevalence of people diagnosed with diabetes. | :heavy_check_mark: |
+| Healthy People | Diabetes | 2023-24 | [NISRA](https://data.nisra.gov.uk/) | [OGL3](https://www.nisra.gov.uk/crown-copyright) | :heavy_check_mark: Indicator: Percentage prevalence of people diagnosed with diabetes. | :heavy_check_mark: |
 | Healthy People | Kidney and Liver Disease | :x: | :x: | :x: | :x: Data unavailable. | :x: |
 | Healthy People | Musculoskeletal Conditions | :x: | :x: | :x: | :x: No data available | :x: |
 | Healthy People | Respiratory Conditions: Asthma & COPD | 2023-24 | [NISRA](https://data.nisra.gov.uk/) | [OGL3](https://www.nisra.gov.uk/crown-copyright) | :heavy_check_mark: Indicator: Percentage rate of people self-reported as having asthma and/or COPD. | :heavy_check_mark: |
