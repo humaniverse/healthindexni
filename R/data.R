@@ -1,3 +1,6 @@
+#' @importFrom tibble tibble
+NULL
+
 #' Percentage of Cancer Screening Uptake (2022-2023)
 #'
 #' A dataset containing statistics on the percentage of cancer screening uptake
