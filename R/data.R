@@ -100,7 +100,7 @@
 #' @format A data frame with 11 rows and 3 variables:
 #' \describe{
 #'   \item{lgd14_code}{Local Authority Code}
-#'   \item{gp_median_travel_time}{Median travel time (in minutes) to the nearest
+#'   \item{gp_mean_travel_time}{Mean travel time (in minutes) to the nearest
 #'   GP among all the Super Data Zones within a Local Authority}
 #'   \item{year}{Year the data was last updated}
 #'   ...
@@ -121,7 +121,7 @@
 #' @format A data frame with 11 rows and 3 variables:
 #' \describe{
 #'   \item{lgd14_code}{Local Authority Code}
-#'   \item{pharmacy_median_travel_time}{Median travel time (in minutes) to the nearest
+#'   \item{pharmacy_mean_travel_time}{Mean travel time (in minutes) to the nearest
 #'   pharmacy among all the Super Data Zones within a Local Authority}
 #'   \item{year}{Year the data was last updated}
 #'   ...
@@ -142,8 +142,8 @@
 #' @format A data frame with 11 rows and 3 variables:
 #' \describe{
 #'   \item{lgd14_code}{Local Authority Code}
-#'   \item{pharmacy_median_travel_time}{Median travel time (in minutes) to the nearest
-#'   pharmacy among all the Super Data Zones within a Local Authority}
+#'   \item{sports_centre_mean_travel_time}{Mean travel time (in minutes) to the nearest
+#'   sports centre among all the Super Data Zones within a Local Authority}
 #'   \item{year}{Year the data was last updated}
 #'   ...
 #' }
