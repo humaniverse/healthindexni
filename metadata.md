@@ -52,7 +52,7 @@
 | Healthy People | Musculoskeletal Conditions | :x: | :x: | :x: | :x: No data available | :x: |
 | Healthy People | Respiratory Conditions: Asthma & COPD | 2023-24 | [NISRA](https://data.nisra.gov.uk/) | [OGL3](https://www.nisra.gov.uk/crown-copyright) | :heavy_check_mark: Indicator: Percentage rate of people self-reported as having asthma and/or COPD. | :heavy_check_mark: |
 | Healthy Places | Private Outdoor Space | :x: | :x: | :x: | :x: Data unavailable. | :x: |
-| Healthy Places | Public Green Space | :x: | :x: | :x: | :heavy_exclamation_mark: Indicator not overtly present in England's Health Index. To review at the end. | :x: |
+| Healthy Places | Public Green Space | :x: | :x: | :x: | :heavy_exclamation_mark: This indicator is not present in England's Health Index and may be substituted by the indicator, 'Private outdoor space'. | :x: |
 | Healthy Places | Household Overcrowding | 2017 | [NISRA](https://data.nisra.gov.uk/) | [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :heavy_check_mark: Indicator: Percentage of households experiencing overcrowding| :heavy_check_mark: |
 | Healthy Places | Rough Sleeping | :x: | :x: | :x: | :x: Data unavailable. | :x: |
 | Healthy Places | Distance to GP Services | :x: | :x: | :x: | :x: - data unavailable | :x: |
