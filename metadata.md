@@ -54,7 +54,6 @@
 | Healthy Places | Private Outdoor Space | :x: | :x: | :x: | :x: Data unavailable. | :x: |
 | Healthy Places | Public Green Space | :x: | :x: | :x: | :heavy_exclamation_mark: Indicator not overtly present in England's Health Index. To review at the end. | :x: |
 | Healthy Places | Household Overcrowding | 2017 | [NISRA](https://data.nisra.gov.uk/) | [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :heavy_check_mark: Indicator: Percentage of households experiencing overcrowding| :heavy_check_mark: |
-| Healthy Places | Housing Affordability | :x: | :x: | :x: | :heavy_exclamation_mark: Indicator not overtly present in England's Health Index. To review at the end. | :x: |
 | Healthy Places | Rough Sleeping | :x: | :x: | :x: | :x: Data unavailable. | :x: |
 | Healthy Places | Distance to GP Services | :x: | :x: | :x: | :x: - data unavailable | :x: |
 | Healthy Places | Distance to Pharmacies | :x: | :x: | :x: | :x: - data unavailable | :x: |
