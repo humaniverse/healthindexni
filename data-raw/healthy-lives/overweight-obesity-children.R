@@ -1,36 +1,33 @@
+# ---- Load packages ----
 library(tidyverse)
-library(httr)
-library(readODS)
 
-GET(
-  "https://www.ninis2.nisra.gov.uk/Download/Health%20and%20Social%20Care/Childhood%20BMI%20(administrative%20geographies).ods",
-  write_disk(tf <- tempfile(fileext = ".ods"))
-)
+# ---- Get and clean data ----
+# Childhood Overweight Obesity
+# Source: https://data.nisra.gov.uk/
 
-raw <-
-  read_ods(
-    tf,
-    sheet = "LGD2014",
-    range = "B4:H15"
-  )
+url <- "https://ws-data.nisra.gov.uk/public/api.restful/PxStat.Data.Cube_API.ReadDataset/CHILDBMILGD/CSV/1.0/"
+childhood_overweight_obesity_raw <- read_csv(url)
 
-obesity <-
-  raw |>
-  as_tibble() |>
+lives_childhood_overweight_obesity <- childhood_overweight_obesity_raw |>
+  filter(
+    SEX == "All",
+    `Academic Year` == "2022/23",
+    `Statistic Label` %in%
+      c(
+        "Proportion of P1 children who are overweight or obese",
+        "Proportion of Y8 children who are overweight or obese"
+      )
+  ) |>
+  summarise(
+    overweight_obesity_percentage = mean(VALUE, na.rm = TRUE),
+    .by = c(`Academic Year`, "LGD2014")
+  ) |>
   select(
-    lad_code = `LGD2014 Code`,
-    rate_primary_1 = `% Overweight or Obese (Primary 1): All`,
-    rate_year_8 = `% Overweight or Obese (Year 8): All`
+    ltla24_code = LGD2014,
+    overweight_obesity_percentage,
+    year = `Academic Year`
   ) |>
-  rowwise() |>
-  mutate(
-    overweight_obese_children_rate = mean(
-      c(rate_primary_1, rate_year_8),
-      na.rm = TRUE
-    )
-  ) |>
-  ungroup() |>
-  select(lad_code, overweight_obese_children_rate)
+  filter(ltla24_code != "N92000002")
 
-# Save
-write_rds(obesity, "data/vulnerability/health-inequalities/northern-ireland/healthy-lives/overweight-obesity-children.rds")
+# ---- Save output to data/ folder ----
+usethis::use_data(lives_childhood_overweight_obesity, overwrite = TRUE)

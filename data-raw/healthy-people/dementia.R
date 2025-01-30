@@ -1,25 +1,27 @@
+# ---- Load packages ----
 library(tidyverse)
-library(httr)
-library(readODS)
 
-GET(
-  "https://www.ninis2.nisra.gov.uk/Download/Health%20and%20Social%20Care/Disease%20Prevalence%20(Quality%20Outcomes%20Framework)%20(administrative%20geographies).ods",
-  write_disk(tf <- tempfile(fileext = ".ods"))
-)
+# ---- Get and clean data ----
+# Dementia Data
+# Source: https://data.nisra.gov.uk/
 
-raw <-
-  read_ods(
-    tf,
-    sheet = "LGD2014",
-    range = "B4:AL15"
-  )
+url <- "https://ws-data.nisra.gov.uk/public/api.restful/PxStat.Data.Cube_API.ReadDataset/DISPREVLGD/CSV/1.0/"
+dementia_raw <- read_csv(url)
 
-dementia <-
-  raw |>
-  as_tibble() |>
+people_dementia <- dementia_raw |>
+  filter(
+    `Statistic Label` == "Raw disease prevalence per 1,000 patients",
+    `Disease` == "Dementia",
+    `Financial Year` == "2023/24",
+    `LGD2014` != "N92000002"
+  ) |>
+  rowwise() |>
+  mutate(dementia_percentage = VALUE / 10) |>
   select(
-    lad_code = `LGD2014 Code`,
-    dementia_per_1000_patients = `Dementia Register: Raw Prevalence per 1,000 patients2`
+    ltla24_code = LGD2014,
+    dementia_percentage,
+    year = `Financial Year`
   )
 
-write_rds(dementia, "data/vulnerability/health-inequalities/northern-ireland/healthy-people/dementia.rds")
+# ---- Save output to data/ folder ----
+usethis::use_data(people_dementia, overwrite = TRUE)

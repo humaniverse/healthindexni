@@ -1,25 +1,23 @@
+# ---- Load packages ----
 library(tidyverse)
-library(httr)
-library(readODS)
 
-GET(
-  "https://www.ninis2.nisra.gov.uk/Download/Health%20and%20Social%20Care/Standardised%20Death%20Rate%20-%20Avoidable%20(administrative%20geographies).ods",
-  write_disk(tf <- tempfile(fileext = ".ods"))
-)
+# ---- Get and clean data ----
+# Avoidable Deaths Data
+# Source: https://data.nisra.gov.uk/
+avoidable_deaths_raw <- read_csv("https://ws-data.nisra.gov.uk/public/api.restful/PxStat.Data.Cube_API.ReadDataset/SDROECDLGD/CSV/1.0/")
 
-raw <-
-  read_ods(
-    tf,
-    sheet = "LGD2014",
-    range = "B4:E15"
-  )
-
-avoidable_deaths <-
-  raw |>
-  as_tibble() |>
+people_avoidable_deaths <- avoidable_deaths_raw |>
+  filter(
+    `Grouped Year` == "2018-22",
+    `Sex Label` == "All Persons",
+    `Statistic Label` == "Avoidable deaths per 100,000 population",
+    LGD2014 != "N92000002"
+  ) |>
   select(
-    lad_code = `LGD2014 Code`,
-    avoidable_death_rate_per_100000 = `Standardised Death Rate - Avoidable (per 100,000): All`
+    ltla24_code = LGD2014,
+    avoidable_deaths_per_100k = VALUE,
+    year = `Grouped Year`
   )
 
-write_rds(avoidable_deaths, "data/vulnerability/health-inequalities/northern-ireland/healthy-people/avoidable-deaths.rds")
+# ---- Save output to data/ folder ----
+usethis::use_data(people_avoidable_deaths, overwrite = TRUE)
