@@ -44,17 +44,17 @@
 | Healthy People | Diabetes | 2023-24 | [NISRA](https://data.nisra.gov.uk/) | [OGL3](https://www.nisra.gov.uk/crown-copyright) | :heavy_check_mark: Indicator: Percentage prevalence of people diagnosed with diabetes. | :heavy_check_mark: | Worse |
 | Healthy People | Kidney and Liver Disease | :x: | :x: | :x: | :x: Data unavailable. | :x: | :x: |
 | Healthy People | Musculoskeletal Conditions | :x: | :x: | :x: | :x: No data available | :x: | :x: |
-| Healthy People | Respiratory Conditions: Asthma & COPD | 2023-24 | [NISRA](https://data.nisra.gov.uk/) | [OGL3](https://www.nisra.gov.uk/crown-copyright) | :heavy_check_mark: Indicator: Percentage rate of people self-reported as having asthma and/or COPD. | :heavy_check_mark: |
-| Healthy Places | Private Outdoor Space | :x: | :x: | :x: | :x: Data unavailable. | :x: |
-| Healthy Places | Household Overcrowding | 2017 | [NISRA](https://data.nisra.gov.uk/) | [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :heavy_check_mark: Indicator: Percentage of households experiencing overcrowding| :heavy_check_mark: |
-| Healthy Places | Rough Sleeping | :x: | :x: | :x: | :x: Data unavailable. | :x: |
-| Healthy Places | Distance to GP Services | :x: | :x: | :x: | :x: - data unavailable | :x: |
-| Healthy Places | Distance to Pharmacies | :x: | :x: | :x: | :x: - data unavailable | :x: |
-| Healthy Places | Distance to Sports or Leisure Facilities | :x: | :x: | :x: | :x: - data unavailable | :x: |
-| Healthy Places | Patients offered acceptable GP practice appointments | :x: | :x: | :x: | :x: Data unavailable. | :x: |
-| Healthy Places | Personal Crime | 2017 | [NISRA](https://data.nisra.gov.uk/) | [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :heavy_check_mark: Indicator: Personal crime per 1,000 people. | :heavy_check_mark: |
-| Healthy Places | Low-Level Crime | :x: | :x: | :x: | :x: Data unavailable. | :x: |
-| Healthy Places | Air Pollution | 2019 | [DEFRA](https://uk-air.defra.gov.uk/data/pcm-data) | [OGL3](https://www.gov.scot/crown-copyright/) | :heavy_check_mark: Indicator: Air pollution, population weighted annual mean PM2.5 | :heavy_check_mark: |
+| Healthy People | Respiratory Conditions: Asthma & COPD | 2023-24 | [NISRA](https://data.nisra.gov.uk/) | [OGL3](https://www.nisra.gov.uk/crown-copyright) | :heavy_check_mark: Indicator: Percentage rate of people self-reported as having asthma and/or COPD. | :heavy_check_mark: | Worse |
+| Healthy Places | Private Outdoor Space | :x: | :x: | :x: | :x: Data unavailable. | :x: | :x: |
+| Healthy Places | Household Overcrowding | 2017 | [NISRA](https://data.nisra.gov.uk/) | [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :heavy_check_mark: Indicator: Percentage of households experiencing overcrowding| :heavy_check_mark: | Worse |
+| Healthy Places | Rough Sleeping | :x: | :x: | :x: | :x: Data unavailable. | :x: | :x:
+| Healthy Places | Distance to GP Services | :x: | :x: | :x: | :x: Data unavailable | :x: | :x: |
+| Healthy Places | Distance to Pharmacies | :x: | :x: | :x: | :x: Data unavailable | :x: | :x: |
+| Healthy Places | Distance to Sports or Leisure Facilities | :x: | :x: | :x: | :x: Data unavailable | :x: | :x: |
+| Healthy Places | Patients offered acceptable GP practice appointments | :x: | :x: | :x: | :x: Data unavailable. | :x: | :x:
+| Healthy Places | Personal Crime | 2017 | [NISRA](https://data.nisra.gov.uk/) | [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :heavy_check_mark: Indicator: Personal crime per 1,000 people. | :heavy_check_mark: | Worse |
+| Healthy Places | Low-Level Crime | :x: | :x: | :x: | :x: Data unavailable. | :x: | :x: |
+| Healthy Places | Air Pollution | 2019 | [DEFRA](https://uk-air.defra.gov.uk/data/pcm-data) | [OGL3](https://www.gov.scot/crown-copyright/) | :heavy_check_mark: Indicator: Air pollution, population weighted annual mean PM2.5 | :heavy_check_mark: | Worse |
 | Healthy Places | Noise Complaints | 2023-2024 | [DAERA](https://www.daera-ni.gov.uk/sites/default/files/publications/daera/Noise%20Complaint%20Statistics%20for%20NI%202023-24.PDF) | [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :heavy_check_mark: Rate of noise complaints per 1,000 people. | :heavy_check_mark: 
 | Healthy Places | Road Safety | 2023 | [PSNI](https://www.psni.police.uk/about-us/our-publications-and-reports/official-statistics/road-traffic-collision-statistics)| [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :heavy_check_mark: Number of people seriously injured or killed by Local Authority area. | :heavy_check_mark: |
 | Healthy Places | Internet access | 2021/22 | [NISRA](https://data.nisra.gov.uk/) | [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :heavy_check_mark: Indicator: Percentage of households without access to the internet at home. | :heavy_check_mark:|
