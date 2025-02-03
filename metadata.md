@@ -1,6 +1,7 @@
 ## Northern Ireland Health Inequalities Vulnerability Metadata
 
-| Domain | Indicator | Year | Source | License | Indicator Code Added to `R/` | Data Added to `data/` | Score Significance: Higher Score Better/Worse Outcome | --- | --- | --- | --- | --- | --- |
+| Domain | Indicator | Year | Source | License | Indicator Code Added to `R/` | Data Added to `data/` |
+| --- | --- | --- | --- | --- | --- | --- |
 | Healthy Lives | Alcohol Misuse | 2019 | [Census of drug and alcohol treatment services in Northern Ireland](https://www.health-ni.gov.uk/publications/census-drug-and-alcohol-treatment-services-northern-ireland-30th-april-2019) | [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :heavy_check_mark: Indicator: Rate of unique patient admissions per 100k population for alcohol-related conditions | :heavy_check_mark: |
 | Healthy Lives | Drug Misuse | :x: | :x: | :x: | :x: Data unavailable. | :x: |
 | Healthy Lives | Healthy Eating | 2022-23 | [Health Survey Northern Ireland](https://www.health-ni.gov.uk/publications/health-survey-northern-ireland-first-results-202223) | [OGL3](https://www.ninis2.nisra.gov.uk/public/terms.aspx) | :heavy_check_mark: Indicator: Percentage of People that consume 5 or more fruit and vegetable portions per day | :heavy_check_mark: |
