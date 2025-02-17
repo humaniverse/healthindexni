@@ -163,8 +163,8 @@ scores$health_inequalities_quantile <- quantise(scores$health_inequalities_rank)
 
 #--- save ----------------------------------------------------------------------
 
-scotland_health_index_subdomains <- as_tibble(subdomains)
-usethis::use_data(scotland_health_index_subdomains, overwrite = TRUE)
+ni_health_index_subdomains <- as_tibble(subdomains)
+usethis::use_data(ni_health_index_subdomains, overwrite = TRUE)
 
-scotland_health_index <- as_tibble(scores)
-usethis::use_data(scotland_health_index, overwrite = TRUE)
+ni_health_index <- as_tibble(scores)
+usethis::use_data(ni_health_index, overwrite = TRUE)
