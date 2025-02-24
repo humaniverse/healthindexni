@@ -34,7 +34,8 @@ low_birth_weight <- low_birth_weight_raw |>
     ltla23_name = `...3`,
     low_birth_weight_percentage = `% low birth weight infants (<2,500g)`,
     year
-  )
+  ) |>
+  mutate(low_birth_weight_percentage = as.numeric(str_remove(low_birth_weight_percentage, "%")))
 
 # Join datasets
 lives_low_birth_weight <- low_birth_weight |>
