@@ -39,7 +39,7 @@ infant_mortality_hb <- infant_mortality_hb |>
 
 # Infant mortality data + LA code
 
-lives_infant_mortality <- infant_mortality_hb |>
+people_infant_mortality <- infant_mortality_hb |>
   left_join(hb_ltla_lookup) |>
   mutate(year = "2018-22") |>
   select(
@@ -51,4 +51,4 @@ lives_infant_mortality <- infant_mortality_hb |>
 
 
 # ---- Save output to data/ folder ----
-usethis::use_data(lives_infant_mortality, overwrite = TRUE)
+usethis::use_data(people_infant_mortality, overwrite = TRUE)
