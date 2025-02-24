@@ -22,29 +22,14 @@ indicators <- map(indicators, ~ select(.x, -starts_with("year")))
 stopifnot(all(lengths(indicators) == 2))
 
 # NOTE: a few indicators have "lgd14_code" - renaming the column
+# TODO: fix in data-raw
+# TODO: need API key...
 indicators <- map(indicators, ~ rename(.x, any_of(c(ltla24_code = "lgd14_code"))))
 
 # combine to a single table
 indicators <- reduce(indicators, left_join, by = "ltla24_code")
 
-# NOTE: fix low_birth_weight_percentage to numeric
-indicators <- indicators |>
-  mutate(low_birth_weight_percentage = as.numeric(str_replace(low_birth_weight_percentage, "%", "")))
-
 names(indicators)[-1] <- str_replace(basename(files), ".rda$", "")
-
-# NOTE: move infant mortality from "lives" to people
-indicators <- indicators |>
-  rename(people_infant_mortality = "lives_infant_mortality")
-
-# NOTE: move child poverty from "lives" to places
-indicators <- indicators |>
-  rename(places_child_poverty = "lives_child_poverty")
-
-# NOTE: move unemployment from "lives" to places
-indicators <- indicators |>
-  rename(places_unemployment = "lives_unemployment")
-
 
 # all the indicators that should be represented as higher = better
 # but are currently higher = worse
