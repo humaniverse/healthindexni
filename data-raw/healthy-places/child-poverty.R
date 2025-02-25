@@ -8,7 +8,7 @@ library(tidyverse)
 url <- "https://ws-data.nisra.gov.uk/public/api.restful/PxStat.Data.Cube_API.ReadDataset/NIMDM17T10/CSV/1.0/"
 child_poverty_raw <- read_csv(url)
 
-lives_child_poverty <- child_poverty_raw |>
+places_child_poverty <- child_poverty_raw |>
   filter(`Statistic Label` ==
     "Proportion of the population aged 15 and under living in households whose equivalised income is below 60 per cent of the NI median") |>
   select(
@@ -18,4 +18,4 @@ lives_child_poverty <- child_poverty_raw |>
   )
 
 # ---- Save output to data/ folder ----
-usethis::use_data(lives_child_poverty, overwrite = TRUE)
+usethis::use_data(places_child_poverty, overwrite = TRUE)
