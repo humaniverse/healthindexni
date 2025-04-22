@@ -51,5 +51,10 @@ lives_child_vaccine_coverage <- vaccine_coverage_hb |>
   ) |>
   arrange(ltla24_code)
 
+lives_child_vaccine_coverage <- lives_child_vaccine_coverage |>
+  mutate(domain = "lives") |>
+  mutate(sundomain = "protective measures") |>
+  mutate(is_higher_better = TRUE)
+
 # ---- Save output to data/ folder ----
 usethis::use_data(lives_child_vaccine_coverage, overwrite = TRUE)

@@ -85,5 +85,10 @@ lives_cancer_screening <- cancer_screening_hb |>
   ) |>
   arrange(ltla24_code)
 
+lives_cancer_screening <- lives_cancer_screening |>
+  mutate(domain = "lives") |>
+  mutate(subdomain = "protective measures") |>
+  mutate(is_higher_better = TRUE)
+
 # ---- Save output to data/ folder ----
 usethis::use_data(lives_cancer_screening, overwrite = TRUE)

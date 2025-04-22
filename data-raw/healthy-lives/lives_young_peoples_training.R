@@ -30,5 +30,10 @@ lives_young_peoples_training <- young_peoples_raw |>
   ) |>
   filter(ltla24_code != "N92000002")
 
+lives_young_peoples_training <- lives_young_peoples_training |>
+  mutate(domain = "lives") |>
+  mutate(subdomain = "children and young people") |>
+  mutate(is_higher_better = TRUE)
+
 # ---- Save output to data/ folder ----
 usethis::use_data(lives_young_peoples_training, overwrite = TRUE)

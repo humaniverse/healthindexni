@@ -57,5 +57,10 @@ lives_healthy_eating <- healthy_eating_hb |>
   arrange(ltla24_code) |>
   mutate(healthy_eating_percentage = as.numeric(healthy_eating_percentage))
 
+lives_healthy_eating <- lives_healthy_eating |>
+  mutate(domain = "lives") |>
+  mutate(subdomain = "behavioral risk factors") |>
+  mutate(is_higher_better = TRUE)
+
 # ---- Save output to data/ folder ----
 usethis::use_data(lives_healthy_eating, overwrite = TRUE)

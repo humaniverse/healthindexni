@@ -21,5 +21,10 @@ lives_teenage_pregnancy <- teenage_pregnancy_raw |>
   ) |>
   slice(-12)
 
+lives_teenage_pregnancy <- lives_teenage_pregnancy |>
+  mutate(domain = "lives") |>
+  mutate(subdomain = "children and young people") |>
+  mutate(is_higher_better = FALSE)
+
 # ---- Save output to data/ folder ----
 usethis::use_data(lives_teenage_pregnancy, overwrite = TRUE)

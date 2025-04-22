@@ -71,6 +71,11 @@ lives_alcohol_misuse <- alcohol_misuse_rate_hb |>
   ) |>
   arrange(ltla24_code)
 
+lives_alcohol_misuse <- lives_alcohol_misuse |>
+  mutate(domain = "lives") |>
+  mutate(subdomain = "lives behavioural risk factors") |>
+  mutate(is_higher_better = FALSE)
+
 # ---- Save output to data/ folder ----
 usethis::use_data(lives_alcohol_misuse, overwrite = TRUE)
 

@@ -29,5 +29,10 @@ lives_childhood_overweight_obesity <- childhood_overweight_obesity_raw |>
   ) |>
   filter(ltla24_code != "N92000002")
 
+lives_childhood_overweight_obesity <- lives_childhood_overweight_obesity |>
+  mutate(domain = "lives") |>
+  mutate(subdomain = "physiological risk factors") |>
+  mutate(is_higher_better = FALSE)
+
 # ---- Save output to data/ folder ----
 usethis::use_data(lives_childhood_overweight_obesity, overwrite = TRUE)

@@ -23,5 +23,10 @@ lives_high_blood_pressure <- high_blood_pressure_raw |>
     year = `Financial Year`
   )
 
+lives_high_blood_pressure <- lives_high_blood_pressure |>
+  mutate(domain = "lives") |>
+  mutate(subdomain = "physiological risk factors") |>
+  mutate(is_higher_better = FALSE)
+
 # ---- Save output to data/ folder ----
 usethis::use_data(lives_high_blood_pressure, overwrite = TRUE)

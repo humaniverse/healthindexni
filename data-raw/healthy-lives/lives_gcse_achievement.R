@@ -22,5 +22,10 @@ lives_gsce_attainment <- gsce_raw |>
   ) |>
   slice(-12)
 
+lives_gsce_attainment <- lives_gsce_attainment |>
+  mutate(domain = "lives") |>
+  mutate(subdomain = "children and young people") |>
+  mutate(is_higher_better = TRUE)
+
 # ---- Save output to data/ folder ----
 usethis::use_data(lives_gsce_attainment, overwrite = TRUE)

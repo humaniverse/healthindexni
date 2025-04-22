@@ -19,5 +19,10 @@ lives_pupil_absence <- pupil_absence_raw |>
          year = `Academic Year`) |>
   slice(-12)
 
+lives_pupil_absence <- lives_pupil_absence |>
+  mutate(domain = "lives") |>
+  mutate(sundomain = "children and young people") |>
+  mutate(is_higher_better = FALSE)
+
 # ---- Save output to data/ folder ----
 usethis::use_data(lives_pupil_absence, overwrite = TRUE)

@@ -46,5 +46,10 @@ lives_low_birth_weight <- low_birth_weight |>
     year
   )
 
+lives_low_birth_weight <- lives_low_birth_weight |>
+  mutate(domain = "lives") |>
+  mutate(sundomain = "physiological risk factors") |>
+  mutate(is_higher_better = FALSE)
+
 # ---- Save output to data/ folder ----
 usethis::use_data(lives_low_birth_weight, overwrite = TRUE)

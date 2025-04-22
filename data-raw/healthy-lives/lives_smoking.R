@@ -51,5 +51,10 @@ lives_smoking <- smoking_hb |>
   arrange(ltla24_code) |>
   mutate(smoking_percentage = as.numeric(smoking_percentage))
 
+lives_smoking <- lives_smoking |>
+  mutate(domain = "lives") |>
+  mutate(subdomain = "behavioural risk factors") |>
+  mutate(is_higher_better = FALSE)
+
 # ---- Save output to data/ folder ----
 usethis::use_data(lives_smoking, overwrite = TRUE)
