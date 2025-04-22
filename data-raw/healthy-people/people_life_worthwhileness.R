@@ -23,7 +23,7 @@ people_life_worthwhileness <- life_worthwhileness_raw |>
 
 people_life_worthwhileness <- people_life_worthwhileness |>
   mutate(domain = "people") |>
-  mutate(subdomain = "life worthwileness") |>
+  mutate(subdomain = "personal wellbeing") |>
   mutate(is_higher_better = TRUE)
 
 
