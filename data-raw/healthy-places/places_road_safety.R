@@ -47,5 +47,11 @@ places_road_safety <- ltla_lookup |>
     year
   )
 
+places_road_safety <- places_road_safety |>
+  mutate(domain = "places") |>
+  mutate(subdomain = "living conditions") |>
+  mutate(is_higher_better = FALSE)
+
+
 # ---- Save output to data/ folder ----
 usethis::use_data(places_road_safety, overwrite = TRUE)

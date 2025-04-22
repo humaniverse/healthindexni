@@ -47,5 +47,11 @@ places_noise_complaints <- noise_complaints |>
     year
   )
 
+places_noise_complaints <- places_noise_complaints |>
+  mutate(domain = "places") |>
+  mutate(subdomain = "living conditions") |>
+  mutate(is_higher_better = FALSE)
+
+
 # ---- Save output to data/ folder ----
 usethis::use_data(places_noise_complaints, overwrite = TRUE)

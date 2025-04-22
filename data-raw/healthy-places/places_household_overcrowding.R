@@ -16,5 +16,11 @@ places_household_overcrowding <- overcrowding_raw |>
     year = `Ad-hoc year`
   )
 
+places_household_overcrowding <- places_household_overcrowding |>
+  mutate(domain = "places") |>
+  mutate(subdomain = "living conditions") |>
+  mutate(is_higher_better = FALSE)
+
+
 # ---- Save output to data/ folder ----
 usethis::use_data(places_household_overcrowding, overwrite = TRUE)

@@ -20,5 +20,11 @@ places_unemployment <- unemployment_raw |>
   ) |>
   slice(-1)
 
+places_unemployment <- places_unemployment |>
+  mutate(domain = "places") |>
+  mutate(subdomain = "economic and working conditions") |>
+  mutate(is_higher_better = FALSE)
+
+
 # ---- Save output to data/ folder ----
 usethis::use_data(places_unemployment, overwrite = TRUE)

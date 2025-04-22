@@ -25,5 +25,11 @@ places_personal_crime <- personal_crime_raw |>
     year = `Ad-hoc year`
   )
 
+places_personal_crime <- places_personal_crime |>
+  mutate(domain = "places") |>
+  mutate(subdomain = "crime") |>
+  mutate(is_higher_better = FALSE)
+
+
 # ---- Save output to data/ folder ----
 usethis::use_data(places_personal_crime, overwrite = TRUE)

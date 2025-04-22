@@ -20,5 +20,11 @@ places_internet_access <- internet_access_raw |>
     year = `Financial Year`
   )
 
+places_internet_access <- places_internet_access |>
+  mutate(domain = "places") |>
+  mutate(subdomain = "access to services") |>
+  mutate(is_higher_better = FALSE)
+
+
 # ---- Save output to data/ folder ----
 usethis::use_data(places_internet_access, overwrite = TRUE)

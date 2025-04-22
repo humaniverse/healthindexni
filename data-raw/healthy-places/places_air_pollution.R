@@ -36,5 +36,11 @@ places_air_pollution <-
   ) |>
   mutate(year = "2019")
 
+places_air_pollution <- places_air_pollution |>
+  mutate(domain = "places") |>
+  mutate(subdomain = "living conditions") |>
+  mutate(is_higher_better = FALSE)
+
+
 # ---- Save output to data/ folder ----
 usethis::use_data(places_air_pollution, overwrite = TRUE)
