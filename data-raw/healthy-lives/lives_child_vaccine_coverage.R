@@ -53,7 +53,7 @@ lives_child_vaccine_coverage <- vaccine_coverage_hb |>
 
 lives_child_vaccine_coverage <- lives_child_vaccine_coverage |>
   mutate(domain = "lives") |>
-  mutate(sundomain = "protective measures") |>
+  mutate(subdomain = "protective measures") |>
   mutate(is_higher_better = TRUE)
 
 # ---- Save output to data/ folder ----

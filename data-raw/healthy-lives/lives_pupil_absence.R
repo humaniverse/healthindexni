@@ -21,7 +21,7 @@ lives_pupil_absence <- pupil_absence_raw |>
 
 lives_pupil_absence <- lives_pupil_absence |>
   mutate(domain = "lives") |>
-  mutate(sundomain = "children and young people") |>
+  mutate(subdomain = "children and young people") |>
   mutate(is_higher_better = FALSE)
 
 # ---- Save output to data/ folder ----
