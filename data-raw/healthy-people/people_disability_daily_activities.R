@@ -39,5 +39,11 @@ people_disability_daily_activities <- disability_daily_activities_raw |>
     year
   )
 
+people_disability_daily_activities <- people_disability_daily_activities |>
+  mutate(domain = "people") |>
+  mutate(subdomain = "difficulties in daily life") |>
+  mutate(is_higher_better = FALSE)
+
+
 # ---- Save output to data/ folder ----
 usethis::use_data(people_disability_daily_activities, overwrite = TRUE)

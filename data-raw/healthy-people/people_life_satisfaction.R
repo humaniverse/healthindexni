@@ -21,5 +21,11 @@ people_life_satisfaction <- life_satisfaction_raw |>
     year = `Time`
   )
 
+people_life_satisfaction <- people_life_satisfaction |>
+  mutate(domain = "people") |>
+  mutate(subdomain = "personal wellbeing") |>
+  mutate(is_higher_better = TRUE)
+
+
 # ---- Save output to data/ folder ----
 usethis::use_data(people_life_satisfaction, overwrite = TRUE)

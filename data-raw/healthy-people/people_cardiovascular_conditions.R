@@ -34,5 +34,11 @@ people_cardiovascular_conditions <- cardiovascular_conditions_raw |>
     year = `Financial Year`
   )
 
+people_cardiovascular_conditions <- people_cardiovascular_conditions |>
+  mutate(domain = "people") |>
+  mutate(subdomain = "physical health conditions") |>
+  mutate(is_higher_better = FALSE)
+
+
 # ---- Save output to data/ folder ----
 usethis::use_data(people_cardiovascular_conditions, overwrite = TRUE)

@@ -20,5 +20,11 @@ people_self_harm <- self_harm_raw |>
   ) |>
   slice(-12)
 
+people_self_harm <- people_self_harm |>
+  mutate(domain = "people") |>
+  mutate(subdomain = "mental health") |>
+  mutate(is_higher_better = FALSE)
+
+
 # ---- Save output to data/ folder ----
 usethis::use_data(people_self_harm, overwrite = TRUE)

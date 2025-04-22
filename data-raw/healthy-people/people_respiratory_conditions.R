@@ -33,5 +33,11 @@ people_respiratory_conditions <- respiratory_conditions_raw |>
     year = `Financial Year`
   )
 
+people_respiratory_conditions <- people_respiratory_conditions |>
+  mutate(domain = "people") |>
+  mutate(subdomain = "physical health conditions") |>
+  mutate(is_higher_better = FALSE)
+
+
 # ---- Save output to data/ folder ----
 usethis::use_data(people_respiratory_conditions, overwrite = TRUE)

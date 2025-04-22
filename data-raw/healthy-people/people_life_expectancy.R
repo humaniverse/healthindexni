@@ -56,5 +56,11 @@ people_life_expectancy <- male_le |>
     year
   )
 
+people_life_expectancy <- people_life_expectancy |>
+  mutate(domain = "people") |>
+  mutate(subdomain = "mortality") |>
+  mutate(is_higher_better = TRUE)
+
+
 # ---- Save output to data/ folder ----
 usethis::use_data(people_life_expectancy, overwrite = TRUE)

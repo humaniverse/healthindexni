@@ -21,5 +21,11 @@ people_life_worthwhileness <- life_worthwhileness_raw |>
     year = `Time`
   )
 
+people_life_worthwhileness <- people_life_worthwhileness |>
+  mutate(domain = "people") |>
+  mutate(subdomain = "life worthwileness") |>
+  mutate(is_higher_better = TRUE)
+
+
 # ---- Save output to data/ folder ----
 usethis::use_data(people_life_worthwhileness, overwrite = TRUE)

@@ -50,5 +50,11 @@ people_suicide <- suicides_hb |>
   ) |>
   arrange(ltla24_code)
 
+people_suicide <- people_suicide |>
+  mutate(domain = "people") |>
+  mutate(subdomain = "mental health") |>
+  mutate(is_higher_better = FALSE)
+
+
 # ---- Save output to data/ folder ----
 usethis::use_data(people_suicide, overwrite = TRUE)

@@ -39,5 +39,11 @@ people_mental_health <- mental_health_raw |>
     year
   )
 
+people_mental_health <- people_mental_health |>
+  mutate(domain = "people") |>
+  mutate(subdomain = "mental health") |>
+  mutate(is_higher_better = FALSE)
+
+
 # ---- Save output to data/ folder ----
 usethis::use_data(people_mental_health, overwrite = TRUE)

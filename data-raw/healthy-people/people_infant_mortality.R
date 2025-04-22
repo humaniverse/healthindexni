@@ -49,6 +49,12 @@ people_infant_mortality <- infant_mortality_hb |>
   ) |>
   arrange(ltla24_code)
 
+people_infant_mortality <- people_infant_mortality |>
+  mutate(domain = "people") |>
+  mutate(subdomain = "mortality") |>
+  mutate(is_higher_better = FALSE)
+
+
 
 # ---- Save output to data/ folder ----
 usethis::use_data(people_infant_mortality, overwrite = TRUE)

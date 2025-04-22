@@ -21,5 +21,11 @@ people_diabetes <- diabetes_raw |>
     year = `Financial Year`
   )
 
+people_diabetes <- people_diabetes |>
+  mutate(domain = "people") |>
+  mutate(subdomain = "physical health conditions") |>
+  mutate(is_higher_better = FALSE)
+
+
 # ---- Save output to data/ folder ----
 usethis::use_data(people_diabetes, overwrite = TRUE)

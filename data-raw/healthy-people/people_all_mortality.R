@@ -20,5 +20,11 @@ people_all_mortality <- all_mortality_raw |>
     year = `Grouped Year`
   )
 
+people_all_mortality <- people_all_mortality |>
+  mutate(domain = "people") |>
+  mutate(subdomain = "mortality") |>
+  mutate(is_higher_better = FALSE)
+
+
 # ---- Save output to data/ folder ----
 usethis::use_data(people_all_mortality, overwrite = TRUE)
