@@ -73,7 +73,7 @@ lives_alcohol_misuse <- alcohol_misuse_rate_hb |>
 
 lives_alcohol_misuse <- lives_alcohol_misuse |>
   mutate(domain = "lives") |>
-  mutate(subdomain = "lives behavioural risk factors") |>
+  mutate(subdomain = "behavioural risk factors") |>
   mutate(is_higher_better = FALSE)
 
 # ---- Save output to data/ folder ----

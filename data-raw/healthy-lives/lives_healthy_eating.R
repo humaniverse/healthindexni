@@ -59,7 +59,7 @@ lives_healthy_eating <- healthy_eating_hb |>
 
 lives_healthy_eating <- lives_healthy_eating |>
   mutate(domain = "lives") |>
-  mutate(subdomain = "behavioral risk factors") |>
+  mutate(subdomain = "behavioural risk factors") |>
   mutate(is_higher_better = TRUE)
 
 # ---- Save output to data/ folder ----
