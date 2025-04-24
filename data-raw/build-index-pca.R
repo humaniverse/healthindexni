@@ -14,34 +14,30 @@ library(psych)
 #--- prepare indicators --------------------------------------------------------
 
 # load
-files      <- list.files("data", pattern = "^(lives|places|people).*\\.rda", full.names = TRUE)
-indicators <- Map(function(x) get(load(x)), files)
+files <- list.files("data", pattern = "^(lives|places|people).*\\.rda", full.names = TRUE)
+raw   <- Map(function(x) get(load(x)), files)
 
-stopifnot(all(lengths(indicators) == 6))
+stopifnot(all(lengths(raw) == 6))
 
 # combine
 # NOTE: a few indicators have "lgd14_code" - will be renaming the column
-indicators <- Map(setNames, indicators, list(c("ltla24_code", "value", "year", "domain", "subdomain", "is_higher_better")))
-indicators <- Map(cbind, indicators, indicator = basename(names(indicators)))
-indicators <- do.call(rbind, indicators)
+raw <- Map(setNames, raw, list(c("ltla24_code", "value", "year", "domain", "subdomain", "is_higher_better")))
+raw <- Map(cbind, raw, indicator = basename(names(raw)))
+raw <- do.call(rbind, raw)
 
 # clean up
-indicators <- as_tibble(indicators) |>
+indicators <- as_tibble(raw) |>
   # remove left-over regions from lgd14
   filter(ltla24_code != "N92000002") |>
-  mutate(indicator = str_replace(indicator, "\\.rda$", "")) |>
-  mutate(subdomain = paste0(domain, "_", str_replace_all(subdomain, " ", "_"))) |>
   # flip higher = worse to higher = better
   mutate(value = if_else(is_higher_better, value, -value)) |>
-  select(ltla24_code, indicator, subdomain, value) |>
+  select(-year, -is_higher_better) |>
   # transform to z-scores
   group_by(indicator) |>
   mutate(value = scale(value)[,1]) |>
   ungroup() |>
   # impute missing with mean (mean is 0 after z-score transform)
-  mutate(value = if_else(is.na(value), 0, value)) |>
-  group_split(subdomain) |>
-  map(pivot_wider, names_from = indicator, values_from = value)
+  mutate(value = if_else(is.na(value), 0, value))
 
 
 #--- create subdomains using pca -----------------------------------------------
@@ -82,6 +78,10 @@ build_pc_indicators <- function(x) {
 }
 
 subdomains <- indicators |>
+  mutate(subdomain = paste0(domain, "_", str_replace_all(subdomain, " ", "_"))) |>
+  select(-domain) |>
+  group_split(subdomain) |>
+  map(pivot_wider, names_from = indicator, values_from = value) |>
   map(~ mutate(.x, pcscore = build_pc_indicators(.x[,-c(1:2)]))) |>
   map(~ select(.x, ltla24_code, subdomain, pcscore)) |>
   map(~ rename(.x, !!.x$subdomain[1] := pcscore)) |>
@@ -117,8 +117,10 @@ scores <- tibble(ltla24_code = subdomains$ltla24_code) |>
 
 #--- save ----------------------------------------------------------------------
 
-ni_health_index <- scores
+ni_health_index            <- scores
 ni_health_index_subdomains <- subdomains
+ni_health_index_indicators <- indicators
 
 usethis::use_data(ni_health_index, overwrite = TRUE)
 usethis::use_data(ni_health_index_subdomains, overwrite = TRUE)
+usethis::use_data(ni_health_index_indicators, overwrite = TRUE)
