@@ -5,12 +5,15 @@
 \alias{places_household_overcrowding}
 \title{Percentage Household Overcrowding (2017)}
 \format{
-A data frame with 11 rows and 3 variables:
+A data frame with 11 rows and 6 variables:
 \describe{
 \item{ltla24_code}{Local Authority Code}
 \item{household_overcrowding_percentage}{Percentage of households
 experiencing household overcrowding}
 \item{year}{Year}
+\item{domain}{Indicator domain - lives, people, or places}
+\item{subdomain}{Indicator subdomain}
+\item{is_higher_better}{Does higher scores correspond to better outcomes}
 
 ...
 }

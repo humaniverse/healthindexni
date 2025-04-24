@@ -5,12 +5,15 @@
 \alias{people_anxiety}
 \title{Average Measurement of Anxiety Out of 10 (2022-23)}
 \format{
-A data frame with 11 rows and 3 variables:
+A data frame with 11 rows and 6 variables:
 \describe{
 \item{ltla24_code}{Local Authority Code}
 \item{anxiety_score_out_of_10}{Average personal ratings on feelings of
 anxiety out of 10 - 10 is most anxious, 1 is least anxious}
 \item{year}{Time period}
+\item{domain}{Indicator domain - lives, people, or places}
+\item{subdomain}{Indicator subdomain}
+\item{is_higher_better}{Does higher scores correspond to better outcomes}
 ...
 }
 }

@@ -5,13 +5,16 @@
 \alias{lives_child_vaccine_coverage}
 \title{Percentage of Childhood Vaccine Coverage (2022-2023)}
 \format{
-A data frame with 11 rows and 3 variables:
+A data frame with 11 rows and 6 variables:
 \describe{
 \item{ltla24_code}{Local Authority Code}
 \item{child_vaccine_coverage_percentage}{Percentage of vaccine coverage. Includes
 childhood immunisation statistics (DtaP/IPV/Hib(HepB), MenB, Rotavirus, PCV,
 Hib/MenC, MMR1 (by age 2), MMR1 (by age 5), MMR2 (by age 5). Pre-School Booster)}
 \item{year}{School Year}
+\item{domain}{Indicator domain - lives, people, or places}
+\item{subdomain}{Indicator subdomain}
+\item{is_higher_better}{Does higher scores correspond to better outcomes}
 
 ...
 }

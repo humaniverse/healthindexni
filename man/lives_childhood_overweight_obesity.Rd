@@ -5,12 +5,15 @@
 \alias{lives_childhood_overweight_obesity}
 \title{Average percentage of Children Overweight/Obese (2022/23)}
 \format{
-A data frame with 11 rows and 3 variables:
+A data frame with 11 rows and 6 variables:
 \describe{
 \item{ltla24_code}{Local Authority Code}
 \item{overweight_obesity_percentage}{Average percentage of children clinically
 classed as overweight and obese in P1 and P6 (aged 4/5 and 10/11)}
 \item{year}{School Year}
+\item{domain}{Indicator domain - lives, people, or places}
+\item{subdomain}{Indicator subdomain}
+\item{is_higher_better}{Does higher scores correspond to better outcomes}
 
 ...
 }

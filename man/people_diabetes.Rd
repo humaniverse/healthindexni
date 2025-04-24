@@ -5,11 +5,14 @@
 \alias{people_diabetes}
 \title{Percentage prevalence of diabetes (2023-2024)}
 \format{
-A data frame with 11 rows and 3 variables:
+A data frame with 11 rows and 6 variables:
 \describe{
 \item{ltla24_code}{Local Authority Code}
 \item{diabetes_percentage}{Percentage prevalence of diabetes (all types)}
 \item{year}{Time period}
+\item{domain}{Indicator domain - lives, people, or places}
+\item{subdomain}{Indicator subdomain}
+\item{is_higher_better}{Does higher scores correspond to better outcomes}
 
 ...
 }

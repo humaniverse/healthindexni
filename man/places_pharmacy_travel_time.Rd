@@ -5,12 +5,15 @@
 \alias{places_pharmacy_travel_time}
 \title{Travel time to pharmacies}
 \format{
-A data frame with 11 rows and 3 variables:
+A data frame with 11 rows and 6 variables:
 \describe{
 \item{lgd14_code}{Local Authority Code}
 \item{pharmacy_mean_travel_time}{Mean travel time (in minutes) to the nearest
 pharmacy among all the Super Data Zones within a Local Authority}
 \item{year}{Year the data was last updated}
+\item{domain}{Indicator domain - lives, people, or places}
+\item{subdomain}{Indicator subdomain}
+\item{is_higher_better}{Does higher scores correspond to better outcomes}
 ...
 }
 }

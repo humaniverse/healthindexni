@@ -6,13 +6,16 @@
 \title{Adult Population Percentage with an Emotional, Psychological, or Mental Health
 Condition (2021)}
 \format{
-A data frame with 11 rows and 3 variables:
+A data frame with 11 rows and 6 variables:
 \describe{
 \item{ltla24_code}{Local Authority Code}
 \item{mental_health_percentage}{Percentage of adult population (aged 15+)
 describing themselves as having an emotional, psychological, or mental health
 condition}
 \item{year}{Year}
+\item{domain}{Indicator domain - lives, people, or places}
+\item{subdomain}{Indicator subdomain}
+\item{is_higher_better}{Does higher scores correspond to better outcomes}
 
 ...
 }

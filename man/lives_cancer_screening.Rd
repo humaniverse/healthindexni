@@ -5,12 +5,15 @@
 \alias{lives_cancer_screening}
 \title{Percentage of Cancer Screening Uptake (2022-2023)}
 \format{
-A data frame with 11 rows and 3 variables:
+A data frame with 11 rows and 6 variables:
 \describe{
 \item{ltla24_code}{Local Authority Code}
 \item{cancer_screening_uptake}{Percentage of cancer screening uptake; breast,
 bowel, and cervical cancer.}
 \item{year}{Time period}
+\item{domain}{Indicator domain - lives, people, or places}
+\item{subdomain}{Indicator subdomain}
+\item{is_higher_better}{Does higher scores correspond to better outcomes}
 
 ...
 }

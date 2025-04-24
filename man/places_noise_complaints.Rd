@@ -5,11 +5,14 @@
 \alias{places_noise_complaints}
 \title{Rates of Noise Complaints per 1,000 (2023-2024)}
 \format{
-A data frame with 11 rows and 3 variables:
+A data frame with 11 rows and 6 variables:
 \describe{
 \item{ltla24_code}{Local Authority Code}
 \item{noise_complaints_per_1k}{Number of noise complaints per 1,000 people}
 \item{year}{Year}
+\item{domain}{Indicator domain - lives, people, or places}
+\item{subdomain}{Indicator subdomain}
+\item{is_higher_better}{Does higher scores correspond to better outcomes}
 
 ...
 }

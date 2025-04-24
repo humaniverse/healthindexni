@@ -5,12 +5,15 @@
 \alias{people_avoidable_deaths}
 \title{Rate of Avoidable Deaths per 100k (2018-2022)}
 \format{
-A data frame with 11 rows and 3 variables:
+A data frame with 11 rows and 6 variables:
 \describe{
 \item{ltla24_code}{Local Authority Code}
 \item{avoidable_deaths_per_100k}{Age-standardised avoidable mortality rates per
 100k}
 \item{year}{5-year aggregate period}
+\item{domain}{Indicator domain - lives, people, or places}
+\item{subdomain}{Indicator subdomain}
+\item{is_higher_better}{Does higher scores correspond to better outcomes}
 
 ...
 }
