@@ -96,33 +96,29 @@ quantise <- function(x) {
 }
 
 
-scores <- data.frame(ltla24_code = subdomains$ltla24_code)
-
-# healthy lives
-scores$healthy_lives_score    <- rowSums(select(subdomains, starts_with("lives")))
-scores$healthy_lives_rank     <- rank(scores$healthy_lives_score)
-scores$healthy_lives_quantile <- quantise(scores$healthy_lives_rank)
-
-# healthy places
-scores$healthy_places_score    <- rowSums(select(subdomains, starts_with("places")))
-scores$healthy_places_rank     <- rank(scores$healthy_places_score)
-scores$healthy_places_quantile <- quantise(scores$healthy_places_rank)
-
-# healthy people
-scores$healthy_people_score    <- rowSums(select(subdomains, starts_with("people")))
-scores$healthy_people_rank     <- rank(scores$healthy_people_score)
-scores$healthy_people_quantile <- quantise(scores$healthy_people_rank)
-
-# combined
-scores$health_inequalities_score    <- rowSums(select(scores, ends_with("_score")))
-scores$health_inequalities_rank     <- rank(scores$health_inequalities_score)
-scores$health_inequalities_quantile <- quantise(scores$health_inequalities_rank)
+scores <- tibble(ltla24_code = subdomains$ltla24_code) |>
+  # healthy lives
+  mutate(healthy_lives_score     = rowSums(select(subdomains, starts_with("lives")))) |>
+  mutate(healthy_lives_rank      = rank(healthy_lives_score)) |>
+  mutate(healthy_lives_quantile  = quantise(healthy_lives_rank)) |>
+  # healthy places
+  mutate(healthy_places_score    = rowSums(select(subdomains, starts_with("places")))) |>
+  mutate(healthy_places_rank     = rank(healthy_places_score)) |>
+  mutate(healthy_places_quantile = quantise(healthy_places_rank)) |>
+  # healthy people
+  mutate(healthy_people_score    = rowSums(select(subdomains, starts_with("people")))) |>
+  mutate(healthy_people_rank     = rank(healthy_people_score)) |>
+  mutate(healthy_people_quantile = quantise(healthy_people_rank)) |>
+  # combined
+  mutate(health_inequalities_score    = rowSums(select(subdomains, starts_with(c("lives","places","people"))))) |>
+  mutate(health_inequalities_rank     = rank(health_inequalities_score)) |>
+  mutate(health_inequalities_quantile = quantise(health_inequalities_rank))
 
 
 #--- save ----------------------------------------------------------------------
 
-ni_health_index_subdomains <- as_tibble(subdomains)
-usethis::use_data(ni_health_index_subdomains, overwrite = TRUE)
+ni_health_index <- scores
+ni_health_index_subdomains <- subdomains
 
-ni_health_index <- as_tibble(scores)
 usethis::use_data(ni_health_index, overwrite = TRUE)
+usethis::use_data(ni_health_index_subdomains, overwrite = TRUE)
