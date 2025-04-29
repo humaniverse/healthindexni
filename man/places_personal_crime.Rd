@@ -5,11 +5,14 @@
 \alias{places_personal_crime}
 \title{Rates of Personal Crime per 1,000 (2017)}
 \format{
-A data frame with 11 rows and 3 variables:
+A data frame with 11 rows and 6 variables:
 \describe{
 \item{ltla24_code}{Local Authority Code}
 \item{personal_crime_per_1k}{Number of personal crimes per 1,000 people}
 \item{year}{Year}
+\item{domain}{Indicator domain - lives, people, or places}
+\item{subdomain}{Indicator subdomain}
+\item{is_higher_better}{Does higher scores correspond to better outcomes}
 
 ...
 }

@@ -5,12 +5,15 @@
 \alias{places_internet_access}
 \title{Percentage of Households without Internet Access (2021/22)}
 \format{
-A data frame with 11 rows and 3 variables:
+A data frame with 11 rows and 6 variables:
 \describe{
 \item{ltla24_code}{Local Authority Code}
 \item{no_internet_access_percentage}{Percentage of households without access
 to the internet}
 \item{year}{Financial Year}
+\item{domain}{Indicator domain - lives, people, or places}
+\item{subdomain}{Indicator subdomain}
+\item{is_higher_better}{Does higher scores correspond to better outcomes}
 
 ...
 }

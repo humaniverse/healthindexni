@@ -5,12 +5,15 @@
 \alias{lives_young_peoples_training}
 \title{Percentage of Young People in Education, Employment, and Training (2022/23)}
 \format{
-A data frame with 11 rows and 3 variables:
+A data frame with 11 rows and 6 variables:
 \describe{
 \item{ltla24_code}{Local Authority Code}
 \item{young_peoples_eet_percentage}{Percentage of young people (aged 16-18 in
 Years 12-14) who are in education, employment, and training}
 \item{year}{School Year}
+\item{domain}{Indicator domain - lives, people, or places}
+\item{subdomain}{Indicator subdomain}
+\item{is_higher_better}{Does higher scores correspond to better outcomes}
 
 ...
 }

@@ -5,12 +5,15 @@
 \alias{lives_teenage_pregnancy}
 \title{Rates of teenage pregnancies per 1,000 (2020-22)}
 \format{
-A data frame with 11 rows and 3 variables:
+A data frame with 11 rows and 6 variables:
 \describe{
 \item{ltla24_code}{Local Authority Code}
 \item{teenage_pregnancies_per_1k}{Rate of teenage pregnancies per 1k where
 teenagers are aged between 13 and 19}
 \item{year}{3-year aggregated period}
+\item{domain}{Indicator domain - lives, people, or places}
+\item{subdomain}{Indicator subdomain}
+\item{is_higher_better}{Does higher scores correspond to better outcomes}
 
 ...
 }

@@ -5,12 +5,15 @@
 \alias{people_respiratory_conditions}
 \title{Percentage Rate of Respiratory Conditions (Asthma and COPD) (2023/2024)}
 \format{
-A data frame with 11 rows and 3 variables:
+A data frame with 11 rows and 6 variables:
 \describe{
 \item{ltla24_code}{Local Authroity Code}
 \item{respiratory_conditions_percentage}{Percentage of people who self-reported
 as having asthma and/or COPD}
 \item{year}{Time period - financial year}
+\item{domain}{Indicator domain - lives, people, or places}
+\item{subdomain}{Indicator subdomain}
+\item{is_higher_better}{Does higher scores correspond to better outcomes}
 
 ...
 }

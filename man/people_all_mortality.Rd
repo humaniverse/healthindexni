@@ -5,12 +5,15 @@
 \alias{people_all_mortality}
 \title{Mortality all causes rate per 100k (2020-22)}
 \format{
-A data frame with 11 rows and 3 variables:
+A data frame with 11 rows and 6 variables:
 \describe{
 \item{ltla24_code}{Local Authority Code}
 \item{death_rate_per_100k}{age-sex standardised rate for all causes of
 mortality per 100k}
 \item{year}{3-year aggregated period}
+\item{domain}{Indicator domain - lives, people, or places}
+\item{subdomain}{Indicator subdomain}
+\item{is_higher_better}{Does higher scores correspond to better outcomes}
 
 ...
 }

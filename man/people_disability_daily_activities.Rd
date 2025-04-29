@@ -6,13 +6,16 @@
 \title{Percentage of People Aged 15-64 with Long-Term Health Problem/Disability
 that Limits Daily Activities}
 \format{
-A data frame with 11 rows and 3 variables:
+A data frame with 11 rows and 6 variables:
 \describe{
 \item{ltla24_code}{Local Authority Code}
 \item{disability_activities_limited_percentage}{percentage of people aged 15-64
 with long-term health problem/disability that limits daily activities by a
 lot or by a little.}
 \item{year}{Year}
+\item{domain}{Indicator domain - lives, people, or places}
+\item{subdomain}{Indicator subdomain}
+\item{is_higher_better}{Does higher scores correspond to better outcomes}
 
 ...
 }

@@ -5,12 +5,15 @@
 \alias{people_suicide}
 \title{Deaths from Suicide (2019-2021)}
 \format{
-A data frame with 11 rows and 3 variables:
+A data frame with 11 rows and 6 variables:
 \describe{
 \item{ltla24_code}{Local Authority Code}
 \item{suicide_rate_per_100k}{Deaths from suicide (16+). Age standardised
 rate per 100,000.}
 \item{year}{Time period - 3 year aggregate}
+\item{domain}{Indicator domain - lives, people, or places}
+\item{subdomain}{Indicator subdomain}
+\item{is_higher_better}{Does higher scores correspond to better outcomes}
 
 ...
 }
