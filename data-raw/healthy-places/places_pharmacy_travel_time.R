@@ -51,8 +51,8 @@ ni_pharmacies_lad <-
   filter(!is.na(ltla21_code)) |>
   mutate(
     # Round coords to 3 decimal points to save memory
-    lat = st_coordinates(geometry)[,2] |> round(3),
-    lng = st_coordinates(geometry)[,1] |> round(3)
+    lat = st_coordinates(geometry)[, 2] |> round(3),
+    lng = st_coordinates(geometry)[, 1] |> round(3)
   ) |>
   st_drop_geometry() |>
   as_tibble() |>
@@ -74,12 +74,12 @@ sdz21_centroids_raw <- read_excel(tf, sheet = "SDZ2021")
 
 sdz21_centroids <-
   sdz21_centroids_raw |>
-  st_as_sf(coords = c("X", "Y"), crs = 29902) |>  # The coordinates are in Irish Grid
+  st_as_sf(coords = c("X", "Y"), crs = 29902) |> # The coordinates are in Irish Grid
   st_transform(crs = 4326) |>
   mutate(
     # Round coords to 3 decimal points to save memory
-    lat = st_coordinates(geometry)[,2] |> round(3),
-    lng = st_coordinates(geometry)[,1] |> round(3)
+    lat = st_coordinates(geometry)[, 2] |> round(3),
+    lng = st_coordinates(geometry)[, 1] |> round(3)
   ) |>
   st_drop_geometry() |>
   select(
@@ -101,7 +101,7 @@ pharmacy_travel_time <- tibble()
 #   mutate(osm_id = as.character(osm_id))
 
 for (i in 1:nrow(ni_lad)) {
-  current_ltla_code <- ni_lad[i,]$ltla21_code
+  current_ltla_code <- ni_lad[i, ]$ltla21_code
 
   current_sdz_codes <-
     lookup_dz21_sdz21_dea14_lgd14 |>
@@ -115,7 +115,7 @@ for (i in 1:nrow(ni_lad)) {
 
   # Get pharmacies in the current LAD and its neighbouring LADs
   current_neighbours <-
-    ni_lad[neighbours[[i]],] |>
+    ni_lad[neighbours[[i]], ] |>
     pull(ltla21_code)
 
   current_pharmacies <-
@@ -137,9 +137,12 @@ for (i in 1:nrow(ni_lad)) {
     current_locations_df <- bind_rows(current_sdz_centroid, current_pharmacies)
 
     # Then use the approach shown in Travel Time's R package readme: https://docs.traveltime.com/api/sdks/r
-    current_locations <- apply(current_locations_df, 1, function(x)
-      make_location(id = x['id'], coords = list(lat = as.numeric(x["lat"]),
-                                                lng = as.numeric(x["lng"]))))
+    current_locations <- apply(current_locations_df, 1, function(x) {
+      make_location(id = x["id"], coords = list(
+        lat = as.numeric(x["lat"]),
+        lng = as.numeric(x["lng"])
+      ))
+    })
     current_locations <- unlist(current_locations, recursive = FALSE)
 
     current_search <-
@@ -147,7 +150,7 @@ for (i in 1:nrow(ni_lad)) {
         id = str_glue("search {current_sdz_centroid$id}"), # Make up an ID for the search so each search is unique
         departure_location_id = current_sdz_centroid$id,
         arrival_location_ids = as.list(current_pharmacies$id),
-        travel_time = 10800,  # 3 hours (in seconds)
+        travel_time = 10800, # 3 hours (in seconds)
         properties = list("travel_time"),
         arrival_time_period = "weekday_morning",
         transportation = list(type = "public_transport")
@@ -193,6 +196,27 @@ write_csv(pharmacy_travel_time, "data-raw/healthy-places/pharmacy_travel_time.cs
 
 pharmacy_travel_time <- read_csv("data-raw/healthy-places/pharmacy_travel_time.csv")
 
+# ---- Calculate travel time at SDZ level ----
+sdz <- lookup_dz21_sdz21_dea14_lgd14 |>
+  distinct(sdz21_code)
+
+places_pharmacy_travel_time_sdz <- pharmacy_travel_time |>
+  group_by(sdz21_code) |>
+  summarise(
+    pharmacy_mean_travel_time = mean(travel_time_mins, na.rm = TRUE)
+  ) |>
+  ungroup() |>
+  right_join(sdz, by = "sdz21_code") |> # Include all SDZs
+  mutate(
+    pharmacy_mean_travel_time = replace_na(pharmacy_mean_travel_time, 999), # 999 means unreachable
+    is_within_3_hours = pharmacy_mean_travel_time != 999,
+    year = year(now()),
+    domain = "places",
+    subdomain = "access to services",
+    is_higher_better = FALSE
+  )
+
+# ---- Calculate travel time at Local Authority level ----
 # Look up Local Authorities for each Super Data Zone and GP
 lookup_sdz_lad <-
   lookup_dz21_sdz21_dea14_lgd14 |>
@@ -205,7 +229,7 @@ pharmacy_travel_time <-
 # What are the mean travel times within each Super Data Zone (within each Local Authority)?
 pharmacy_travel_time_mean <-
   pharmacy_travel_time |>
-  select(-osm_id) |>  # We don't need to know the GP ID for this
+  select(-osm_id) |> # We don't need to know the GP ID for this
   group_by(sdz21_code, ltla21_code) |>
   summarise(
     mean_travel_time_mins = mean(travel_time_mins, na.rm = TRUE)
@@ -220,14 +244,16 @@ places_pharmacy_travel_time <-
   summarise(mean_travel_time = mean(mean_travel_time_mins, na.rm = TRUE)) |>
   ungroup() |>
   mutate(year = year(now())) |>
-  rename(lgd14_code = ltla21_code,
-         pharmacy_mean_travel_time = mean_travel_time)
+  rename(
+    lgd14_code = ltla21_code,
+    pharmacy_mean_travel_time = mean_travel_time
+  )
 
 places_pharmacy_travel_time <- places_pharmacy_travel_time |>
   mutate(domain = "places") |>
   mutate(subdomain = "access to services") |>
   mutate(is_higher_better = FALSE)
 
-
 # ---- Save output to data/ folder ----
 usethis::use_data(places_pharmacy_travel_time, overwrite = TRUE)
+usethis::use_data(places_pharmacy_travel_time_sdz, overwrite = TRUE)
