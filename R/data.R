@@ -328,7 +328,7 @@ NULL
 #' Travel times are calculated using the TravelTime API (https://traveltime.com/apis/distance-matrix)
 #' and are based on travelling by public transport on a weekday morning.
 #'
-#' @format A data frame with 11 rows and 6 variables:
+#' @format A data frame with 11 rows and 7 variables:
 #' \describe{
 #' \item{sdz21_code}{Super Data Zone Code}
 #' \item{gp_mean_travel_time}{Mean travel time (in minutes) to the nearest
@@ -460,7 +460,7 @@ NULL
 #' Travel times are calculated using the TravelTime API (https://traveltime.com/apis/distance-matrix)
 #' and are based on travelling by public transport on a weekday morning.
 #'
-#' @format A data frame with 11 rows and 6 variables:
+#' @format A data frame with 11 rows and 7 variables:
 #' \describe{
 #' \item{sdz21_code}{SUper Data Zone Code}
 #' \item{pharmacy_mean_travel_time}{Mean travel time (in minutes) to the nearest
@@ -509,10 +509,10 @@ NULL
 #'
 #' @format A data frame with 11 rows and 6 variables:
 #' \describe{
-#'   \item{lgd14_code}{Local Authority Code}
-#'   \item{sports_centre_mean_travel_time}{Mean travel time (in minutes) to the nearest
+#' \item{lgd14_code}{Local Authority Code}
+#' \item{sports_centre_mean_travel_time}{Mean travel time (in minutes) to the nearest
 #'   sports centre among all the Super Data Zones within a Local Authority}
-#'   \item{year}{Year the data was last updated}
+#' \item{year}{Year the data was last updated}
 #' \item{domain}{Indicator domain - lives, people, or places}
 #' \item{subdomain}{Indicator subdomain}
 #' \item{is_higher_better}{Does higher scores correspond to better outcomes}
@@ -530,10 +530,10 @@ NULL
 #' Travel times are calculated using the TravelTime API (https://traveltime.com/apis/distance-matrix)
 #' and are based on travelling by public transport on a weekday morning.
 #'
-#' @format A data frame with 11 rows and 6 variables:
+#' @format A data frame with 11 rows and 7 variables:
 #' \describe{
-#'  \item{sdz21_code}{Super Data Zone Code}
-#'  \item{sports_centre_mean_travel_time}{Mean travel time (in minutes) to the nearest
+#' \item{sdz21_code}{Super Data Zone Code}
+#' \item{sports_centre_mean_travel_time}{Mean travel time (in minutes) to the nearest
 #'   sports centre. 999 is a pseudo-value that indicates there are no sports
 #'   centres within 3 hours of the SDZ.}
 #' \item{is_within_3_hours}{Is there a sports centre within 3 hours of the centre of

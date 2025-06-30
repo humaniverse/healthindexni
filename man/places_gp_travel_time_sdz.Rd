@@ -5,7 +5,7 @@
 \alias{places_gp_travel_time_sdz}
 \title{Travel time to GPs}
 \format{
-A data frame with 11 rows and 6 variables:
+A data frame with 11 rows and 7 variables:
 \describe{
 \item{sdz21_code}{Super Data Zone Code}
 \item{gp_mean_travel_time}{Mean travel time (in minutes) to the nearest
