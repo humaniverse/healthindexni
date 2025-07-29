@@ -203,13 +203,13 @@ sdz <- lookup_dz21_sdz21_dea14_lgd14 |>
 places_gp_travel_time_sdz <- GP_travel_time |>
   group_by(sdz21_code) |>
   summarise(
-    gp_mean_travel_time = mean(travel_time_mins, na.rm = TRUE)
+    gp_median_travel_time = median(travel_time_mins, na.rm = TRUE)
   ) |>
   ungroup() |>
   right_join(sdz, by = "sdz21_code") |> # Include all SDZs
   mutate(
-    gp_mean_travel_time = replace_na(gp_mean_travel_time, 999), # 999 means unreachable
-    is_within_3_hours = gp_mean_travel_time != 999,
+    gp_median_travel_time = replace_na(gp_median_travel_time, 999), # 999 means unreachable
+    is_within_3_hours = gp_median_travel_time != 999,
     year = year(now()),
     domain = "places",
     subdomain = "access to services",
