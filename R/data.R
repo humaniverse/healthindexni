@@ -320,6 +320,30 @@ NULL
 #'
 "places_gp_travel_time"
 
+#' Travel time to GPs
+#'
+#' A dataset containing the average (median) travel time (in minutes) to the nearest
+#' GP in each Super Data Zone.
+#'
+#' Travel times are calculated using the TravelTime API (https://traveltime.com/apis/distance-matrix)
+#' and are based on travelling by public transport on a weekday morning.
+#'
+#' @format A data frame with 11 rows and 7 variables:
+#' \describe{
+#' \item{sdz21_code}{Super Data Zone Code}
+#' \item{gp_mean_travel_time}{Mean travel time (in minutes) to the nearest
+#'   GP. 999 is a pseudo-value to indicate there are no GPs within 3 hours of the SDZ.}
+#' \item{is_within_3_hours}{Is there a GP within three hours of the centre of the SDZ?}
+#' \item{year}{Year the data was last updated}
+#' \item{domain}{Indicator domain - lives, people, or places}
+#' \item{subdomain}{Indicator subdomain}
+#' \item{is_higher_better}{Does higher scores correspond to better outcomes}
+#'   ...
+#' }
+#' @source \url{https://openstreetmap.org/}
+#'
+"places_gp_travel_time_sdz"
+
 #' Percentage Household Overcrowding (2017)
 #'
 #' A dataset containing statistics on the percentage of households experiencing
@@ -428,6 +452,32 @@ NULL
 #'
 "places_pharmacy_travel_time"
 
+#' Travel time to pharmacies
+#'
+#' A dataset containing the average (median) travel time (in minutes) to the nearest
+#' pharmacy in each Super Data Zone
+#'
+#' Travel times are calculated using the TravelTime API (https://traveltime.com/apis/distance-matrix)
+#' and are based on travelling by public transport on a weekday morning.
+#'
+#' @format A data frame with 11 rows and 7 variables:
+#' \describe{
+#' \item{sdz21_code}{SUper Data Zone Code}
+#' \item{pharmacy_mean_travel_time}{Mean travel time (in minutes) to the nearest
+#'   pharmacy. 999 is a pseudo-value that indicates there are no pharmacies
+#'   within 3 hours of the SDZ.}
+#' \item{is_within_3_hours}{Is there a pharmacy within 3 hours of the centre of
+#' the SDZ?}
+#' \item{year}{Year the data was last updated}
+#' \item{domain}{Indicator domain - lives, people, or places}
+#' \item{subdomain}{Indicator subdomain}
+#' \item{is_higher_better}{Does higher scores correspond to better outcomes}
+#'   ...
+#' }
+#' @source \url{https://openstreetmap.org/}
+#'
+"places_pharmacy_travel_time_sdz"
+
 #' Road safety (2023)
 #'
 #' A dataset containing number of people killed or seriously injured in each
@@ -459,10 +509,10 @@ NULL
 #'
 #' @format A data frame with 11 rows and 6 variables:
 #' \describe{
-#'   \item{lgd14_code}{Local Authority Code}
-#'   \item{sports_centre_mean_travel_time}{Mean travel time (in minutes) to the nearest
+#' \item{lgd14_code}{Local Authority Code}
+#' \item{sports_centre_mean_travel_time}{Mean travel time (in minutes) to the nearest
 #'   sports centre among all the Super Data Zones within a Local Authority}
-#'   \item{year}{Year the data was last updated}
+#' \item{year}{Year the data was last updated}
 #' \item{domain}{Indicator domain - lives, people, or places}
 #' \item{subdomain}{Indicator subdomain}
 #' \item{is_higher_better}{Does higher scores correspond to better outcomes}
@@ -471,6 +521,32 @@ NULL
 #' @source \url{https://openstreetmap.org/}
 #'
 "places_sports_centre_travel_time"
+
+#' Travel time to sports facilities
+#'
+#' A dataset containing the average (median) travel time (in minutes) to the nearest
+#' sports centre in each Super Data Zone.
+#'
+#' Travel times are calculated using the TravelTime API (https://traveltime.com/apis/distance-matrix)
+#' and are based on travelling by public transport on a weekday morning.
+#'
+#' @format A data frame with 11 rows and 7 variables:
+#' \describe{
+#' \item{sdz21_code}{Super Data Zone Code}
+#' \item{sports_centre_mean_travel_time}{Mean travel time (in minutes) to the nearest
+#'   sports centre. 999 is a pseudo-value that indicates there are no sports
+#'   centres within 3 hours of the SDZ.}
+#' \item{is_within_3_hours}{Is there a sports centre within 3 hours of the centre of
+#' the SDZ?}
+#' \item{year}{Year the data was last updated}
+#' \item{domain}{Indicator domain - lives, people, or places}
+#' \item{subdomain}{Indicator subdomain}
+#' \item{is_higher_better}{Does higher scores correspond to better outcomes}
+#'   ...
+#' }
+#' @source \url{https://openstreetmap.org/}
+#'
+"places_sports_centre_travel_time_sdz"
 
 ##' Percentage of People Experiencing Unemployment (2023)
 #'
